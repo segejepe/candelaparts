@@ -180,7 +180,7 @@ app.get('/part/:info', (req, res) => {
 
   let parts;
   if (partType === 'gmp') { // Check the selected part type
-    parts = [...opticsParts, ...consumableParts, ...electronicsParts, ...fluidSystem, ...headParts,, ...gmphd];
+    parts = [...opticsParts, ...consumableParts, ...electronicsParts, ...fluidSystem, ...headParts, ...gmphd];
   } else if (partType === 'gmpp') {
     parts = [...gmpphd,...opticsParts, ...consumableParts, ...electronicsParts, ...fluidSystem, ...headParts];
   } else if (partType === 'vbeam') {
