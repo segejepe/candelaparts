@@ -330,7 +330,7 @@ const vbeamConsumableParts = [
   new VbeamConsumableParts('1414-00-0301', 'CASTER,SWVL,LOCK,4 WHL', 'Front Wheel', '', ''),
   new VbeamConsumableParts('1414-00-0302', 'CASTER,RGD,4 WHL', 'Rear Wheel', '', ''),
   new VbeamConsumableParts('8095-00-0470', 'GOGGLES, PATIENT, LASER, SS, CE', '', 'https://i.ibb.co/W0TP0Zt/8095-00-0470.jpg', ''),
-  new VbeamConsumableParts('8095-00-0475', 'LASER EYEWEAR 5.2@592-597', '', 'https://i.ibb.co/9GCWQw7/8095-00-0475.jpg', ''),
+  new VbeamConsumableParts('8095-00-0475', 'LASER EYEWEAR 5.2@592-597', '', 'https://i.ibb.co/9GCWQw7/8095-00-0475.jpg', 'operator goggles'),
   new VbeamConsumableParts('7122-00-3643', 'VBEAM2 LASER ACCESSORIES', '', '', ''),
   new VbeamConsumableParts('7122-00-7491', 'VBEAM ACCESSORY KIT', '', '', ''),
 ];
