@@ -33,8 +33,13 @@ class GmpServiceTool extends Part { s}
 class GmppHandpieceparts extends Part { }
 
 // Vbeam Perfecta
-class VbeamOpticsParts extends Part { } // Add VbeamOpticsParts class
+class VbeamHeadParts extends Part { } // Add VbeamHeadParts class
 class VbeamConsumableParts extends Part { } // Add VbeamConsumableParts class
+class VbeamFluidParts extends Part { }
+class VbeamElectornicsParts extends Part { }
+class VbeamMdyeParts extends Part{ }
+class VbeamOpticsParts extends Part { }
+class VbeamServiceToolParts extends Part { }
 
 // Prima
 class PrimaHeadParts extends Part { } // Add PrimaHeadParts class
@@ -69,7 +74,8 @@ const opticsParts = [
   new GmpOpticsparts('7122-00-9529', 'BEAM BLOCKER ASSY GMAX PRO', 'Shutter(GMAX PRO)', '', 'F3.1'),
   new GmpOpticsparts('7122-00-9410', 'BEAM BLOCKER ASSY', 'For Old system only', '', 'F3.1'),
   new GmpOpticsparts('7123-00-0202', 'Assy LC DHP Fiber Bundle Kit', '', '', 'Upgrade to Split IO'),
-  new GmpOpticsparts('8075-00-1018', 'Head Detector Fiber (Orange)', '5 Digits IO', '', 'Upgrade to Split IO'),
+  new GmpOpticsparts('7122-00-9574', 'DHP FIBER RECEPTACLE ASSY', '', 'https://i.ibb.co/FY5K9p4/7122-00-9574.jpg', 'F15.1'),
+  new GmpOpticsparts('8075-00-1018', 'Head Detector Fiber (Orange)', '5 Digits IO', '', 'Upgrade to Split IO')
 ];
 
 // GmpConsumableparts 객체 생성
@@ -109,14 +115,13 @@ const consumableParts = [
   new GmpConsumableparts('4001-00-2450', 'Pwr Sply,90-264VIN,15VDC,1A', 'Cryogen Warmer DC adapter', '', ''),
   new GmpConsumableparts('8901-00-9410', 'GentleYAG PRO U conversion to GMAX PRO using Option Kit', '', '', ''),
   new GmpConsumableparts('8901-00-9412', 'GentleLASE PRO U conversion to GMAX PRO using Option Kit', '', '', ''),
-  new GmpConsumableparts('1303-00-0114', 'GAUGE, DISTANCE, 20MM LARGE SPOT', '', 'https://i.ibb.co/tqvXgyn/1303-00-0114.jpg', ''),
-  new GmpConsumableparts('7122-00-9758', 'Large Spot Distance Gauge Kit', '', '', ''),
-  new GmpConsumableparts('7122-00-9521', 'GL PRO 12mm DIST GAUGE KIT, ASSY', 'PRO Series 12mm Distance Gauge -5Pk', 'https://i.ibb.co/dkD2bLJ/7122-00-9521.jpg', ''),
-  new GmpConsumableparts('7122-00-9418', '15MM DISTANCE GAUGE KIT', 'PRO Series 15mm Distance Gauge -5Pk', 'https://i.ibb.co/RQGMDZq/7122-00-9418.jpg', ''),
-  new GmpConsumableparts('7122-00-9424', '18MM DISTANCE GAUGE KIT', 'PRO Series 18mm Distance Gauge -5Pk', 'https://i.ibb.co/2qM92Gm/7122-00-9424.jpg', ''),
-  new GmpConsumableparts('1630-00-0431', 'THERMOCHROMIC INK PAPER', '', 'https://i.ibb.co/ZG3kPwC/1630-00-0431.jpg', ''),
+  new GmpConsumableparts('1303-00-0114', 'GAUGE, DISTANCE, 20MM LARGE SPOT', '', 'https://i.ibb.co/tqvXgyn/1303-00-0114.jpg', 'tip'),
+  new GmpConsumableparts('7122-00-9758', 'Large Spot Distance Gauge Kit', '', '', 'tip'),
+  new GmpConsumableparts('7122-00-9521', 'GL PRO 12mm DIST GAUGE KIT, ASSY', 'PRO Series 12mm Distance Gauge -5Pk', 'https://i.ibb.co/dkD2bLJ/7122-00-9521.jpg', 'tip'),
+  new GmpConsumableparts('7122-00-9418', '15MM DISTANCE GAUGE KIT', 'PRO Series 15mm Distance Gauge -5Pk', 'https://i.ibb.co/RQGMDZq/7122-00-9418.jpg', 'tip'),
+  new GmpConsumableparts('7122-00-9424', '18MM DISTANCE GAUGE KIT', 'PRO Series 18mm Distance Gauge -5Pk', 'https://i.ibb.co/2qM92Gm/7122-00-9424.jpg', 'tip'),
+  new GmpConsumableparts('1630-00-0431', 'THERMOCHROMIC INK PAPER', '', 'https://i.ibb.co/ZG3kPwC/1630-00-0431.jpg', 'DCD'),
   new GmpConsumableparts('1301-00-9378', 'FRONT HANDLE SPECTRUM LASER', '', 'https://i.ibb.co/TYHtNW7/1301-00-9378.jpg', ''),
-  new GmpConsumableparts('7122-00-9574', 'DHP FIBER RECEPTACLE ASSY', '', 'https://i.ibb.co/FY5K9p4/7122-00-9574.jpg', 'F15.1'),
   new GmpConsumableparts('PU00952FR-NA', 'Gentle Patient Brochure Hair Removal', 'Brochure', '', ''),
   new GmpConsumableparts('PU00951EN-NA', 'Wrinkles Patient Brochure, Gentle Pro Series', 'Brochure', '', ''),
   new GmpConsumableparts('PU00953FR-NA', 'Gentle Patient Brochure Comprehensive', 'Brochure', '', ''),
@@ -172,11 +177,10 @@ const fluidSystem = [
   new GmpFluidsystem('4508-00-4023', 'CONTRACTOR DP 40A 230VAC COIL', '', 'https://i.ibb.co/5KgLBjq/4508-00-4023.jpg', ''),
   new GmpFluidsystem('7111-07-2799', 'PCB ASSY ROHS HV SPLIT CAP SPECTRUM', '', 'https://i.ibb.co/GdPsTrh/7111-07-2799.jpg', 'F19.3'),
   new GmpFluidsystem('3450-00-0355', 'PRO SERIES DI CARTRIDGE/ FILTER', '', 'https://i.ibb.co/NTr79XF/3450-00-0355.jpg', ''),
-  new GmpFluidsystem('3460-00-0071', 'CAP VENT 2 1/4 BUTTRESS THRD', '', '', ''),
   new GmpFluidsystem('7122-00-9234', 'ASSY FLUID TUBING KIT SPECTRUM', '', '', ''),
   new GmpFluidsystem('7122-00-9571', 'DHP TUBING KIT', '', '', ''),
   new GmpFluidsystem('7122-00-9592', 'ASSY, FLOW SW, 0.5GPM, COMP FITTINGS', '', '', ''),
-  new GmpFluidsystem('3412-14-0605', 'PLUG,QC,EL,DLRN/EPR,3/8BRB,VLV', '', '', ''),
+  new GmpFluidsystem('3412-14-0605', 'PLUG,QC,EL,DLRN/EPR,3/8BRB,VLV', '', 'https://i.ibb.co/S5cggDP/3412-14-0605.jpg', ''),
   new GmpFluidsystem('3414-00-0246', 'PUMP, 6.2 GPM 24VDC 3.2A CRD WITH NEW CASE ORIENTATION', '', 'https://i.ibb.co/zXC0sKJ/3414-00-0246.jpg', 'F7.3'),
   new GmpFluidsystem('7122-00-9592', 'ASSY, FLOW SW, 0.5GPM, COMP FITTINGS', '', '', ''),
   new GmpFluidsystem('7122-00-9228', 'ASSY TWO ROW HX EXCHANGER PWM FANS', 'Old version(?)\nWO-00351021', 'https://i.ibb.co/DWcYdk2/7122-00-9228.jpg', ''),
@@ -188,18 +192,18 @@ const fluidSystem = [
 // GmpHeadparts 객체 생성
 const headParts = [
   new GmpHeadparts('3160-02-0013', 'Red Manifold O-rings', '', '', ''),
-  new GmpHeadparts('9908-17-0408', "FLASHLMP,REARTIP,700T,4''ARC,8", '', 'https://i.ibb.co/fXBdRH0/9908-17-0408.jpg', 'F5.2, F14.1, F14.2, F12.1, F12.4, F12.3'),
+  new GmpHeadparts('9908-17-0408', "FLASHLMP,REARTIP,700T,4''ARC,8", '2EA for each Laser Head', 'https://i.ibb.co/fXBdRH0/9908-17-0408.jpg', 'F5.2, F14.1, F14.2, F12.1, F12.4, F12.3'),
   new GmpHeadparts('7122-00-9578', 'DHP YAG HEAD ASSY', '', 'https://i.ibb.co/bKxnMYv/7122-00-9578.jpg', 'F12.6, F14.2, F12.1, F19.3, F12.3'),
   new GmpHeadparts('1301-00-9584', 'HEAD MANIFOLD,YAG,DHP', 'Yag Head', 'https://i.ibb.co/cw7D7F9/1301-00-9584.jpg', ''),
   new GmpHeadparts('1301-00-9444', 'HEAD MANIFOLD, SPECTRUM', 'Yag Head', 'https://i.ibb.co/yP9Bm2q/1301-00-9444.jpg', ''),
-  new GmpHeadparts('1301-00-9583', 'HEAD MANIFOLD,ALEX,DHP', 'For Alex Head: 2ea', 'https://i.ibb.co/sgppYts/1301-00-9583.jpg', ''),
+  new GmpHeadparts('1301-00-9583', 'HEAD MANIFOLD,ALEX,DHP', 'For Alex Head: 2EA', 'https://i.ibb.co/sgppYts/1301-00-9583.jpg', ''),
   new GmpHeadparts('3406-41-0804', 'ELBOW,MALE, 45 DEGREE, 1/2x1/4 NPT,SS', 'Yag Head', 'https://i.ibb.co/bBsG4Cw/3406-41-0804.jpg', ''),
   new GmpHeadparts('3406-10-0804', 'CONN,MALE 1/2T x1/4MPT SS', 'Yag Head', 'https://i.ibb.co/m8zWxVN/3406-10-0804.jpg', ''),
   new GmpHeadparts('7122-00-9572', 'GMAX DHP ALEX HEAD', '', '', 'F14.1, F12.1, F19.3, F12.3'),
   new GmpHeadparts('7122-57-9572', 'FSE, GMAX DHP ALEX HEAD (Service parts: Republished)', 'Service parts: Republished', '', ''),
-  new GmpHeadparts('2849-04-0854', 'Head Screw', 'Long Screw', '', ''),
-  new GmpHeadparts('3160-02-0013', 'Red Manifold O-rings', '', '', ''),
-  new GmpHeadparts('3160-01-0012', 'White O-rings', '', '', ''),
+  new GmpHeadparts('2849-04-0854', 'Head Screw', 'Long Screw', '4EA for each Laser Head', ''),
+  new GmpHeadparts('3160-02-0013', 'Red Manifold O-rings', '4EA for each Laser Head', '', ''),
+  new GmpHeadparts('3160-01-0012', 'White O-rings', '6EA for each Laser Head', '', ''),
   new GmpHeadparts('7122-00-9207', 'Pump Cavity', '', '', 'F12, F6.1, F19.3, F12.1, F12.4, F12.3'),
   new GmpHeadparts('1301-00-7763', 'Yag ROD', '', '', 'F19.3'),
   new GmpHeadparts('1301-00-7014', 'Alex ROD', '', '', 'F19.3'),
@@ -228,10 +232,10 @@ const gmphd = [
 
 // Gmpcontrollerparts 객체 생성
 const gmpController =[
-  new GmpControllerparts('7123-07-0014', 'Split IO', '', 'https://i.ibb.co/XZHsLD0/7123-07-0014.jpg', 'F26.1,Upgrade to Spilt IO, F7.1, F7.2, F18.1, F18.2, F18.3, F8.4, F9.2'),
+  new GmpControllerparts('7123-07-0014', 'Split IO', '', 'https://i.ibb.co/XZHsLD0/7123-07-0014.jpg', 'F26.1,Upgrade to Split IO, F7.1, F7.2, F18.1, F18.2, F18.3, F8.4, F9.2'),
   new GmpControllerparts('7123-67-0014', 'Split IO', 'FSE Part', 'https://i.ibb.co/XZHsLD0/7123-07-0014.jpg', 'F26.1, F7.1, F7.2, F18.1, F18.2, F18.3, F8.4'),
-  new GmpControllerparts('7123-00-0588', 'ASSY, Q7 LCD DISPLAY', 'New Display for 5digts', 'https://i.ibb.co/PZzs2P8/7123-00-0588.jpg', 'F26.1,Upgrade to Spilt IO, F24'),
-  new GmpControllerparts('7123-00-0201', 'GUI Display Cable Set Pro Series', 'New Display for 5digts', '', 'Upgrade to Spilt IO')
+  new GmpControllerparts('7123-00-0588', 'ASSY, Q7 LCD DISPLAY', 'New Display for 5digts', 'https://i.ibb.co/PZzs2P8/7123-00-0588.jpg', 'F26.1,Upgrade to Split IO, F24'),
+  new GmpControllerparts('7123-00-0201', 'GUI Display Cable Set Pro Series', 'New Display for 5digts', '', 'Upgrade to Split IO')
 ];
 
 // Gmpskinparts 객체 생성
@@ -276,14 +280,33 @@ const gmpphd = [
   new GmppHandpieceparts('7123-00-0609', 'ASSY, SLIDER ATTACHMENT, 26MM, GMPP', 'GMPP only', '', 'consumable'),
 ];
 
+// VbeamHeadParts 객체 생성
+const VbeamHead = [
+  new VbeamHeadParts('8001-00-0002', 'PR,70%R@580-600nm,0.375\'\'Dia', 'OC lens', 'https://i.ibb.co/gd36Lmq/8001-00-0002.jpg', 'F12.4, F12.1, Low energy'),
+  new VbeamHeadParts('8005-00-2013', 'HR,580-600nm,0.375\'\'Dia', 'HR lens', 'https://i.ibb.co/pvjxwTY/8005-00-2013.jpg', 'F12.4, F12.1, Low energy'),
+  new VbeamHeadParts('1301-00-7396', 'Reflector,6.05\'\'', 'Reflector, 2EA', 'https://i.ibb.co/5sCw8nj/1301-00-7396.jpg', 'F12.4, F12.1, Low energy'),
+  new VbeamHeadParts('9908-04-1220', 'FLASHLAMP,7.15mm,ENDS', 'Flash lamp', '', 'F12.4, F12.1, Low energy, F14'),
+  new VbeamHeadParts('1301-00-7395', 'Dye Cell,4mmx8mm Cleaned', 'Dye Cell', 'https://i.ibb.co/4tyh2YG/1301-00-7395.jpg', 'F12.4, F12.1, Low energy'),
+  new VbeamHeadParts('1301-00-7408', 'Water Jacket,Pyrex,Sclero-LP', 'Water Jacket', 'https://i.ibb.co/n7qhM8V/1301-00-7408.jpg', 'F12.4, F12.1, Low energy'),
+  new VbeamHeadParts('3160-02-0010', 'O-RING,SLCONE,1/4" ID 3/8"', 'Flash lamp O-ring(Red): 2ea', '', 'F12.4, F12.1'),
+  new VbeamHeadParts('3160-01-0012', 'O-RNG,WHTSIL,3/8"ID,1/2"OD', 'Water jacket O-ring: 2ea', '', 'F12.1, F12.4'),
+  new VbeamHeadParts('3160-01-0011', 'O-RNG,WHTSIL,5/16id7/16od1/16w', 'Dye cell oring : 2ea', '', 'F12.1, F12.4'),
+  new VbeamHeadParts('3160-02-0024', 'O-Ring,Wht,Silicon,.276IDx.047', 'O-ring for PR and HR : 2ea', '', 'F12.1, F12.4'),
+  new VbeamHeadParts('7122-00-7528', 'ASSY,LSR HD,VBEAM2', 'Laser Head Assy', '', 'F12.1, F12.4, Low energy'),
+];
+
 // VbeamOpticsParts 객체 생성
-const vbeamOpticsParts = [
-  new VbeamOpticsParts('8001-00-0002', 'PR,70%R@580-600nm,0.375\'\'Dia', 'OC lens', 'https://i.ibb.co/gd36Lmq/8001-00-0002.jpg', 'F12.4'),
-  new VbeamOpticsParts('8005-00-2013', 'HR,580-600nm,0.375\'\'Dia', 'HR lens', 'https://i.ibb.co/pvjxwTY/8005-00-2013.jpg', 'F12.4'),
-  new VbeamOpticsParts('1301-00-7396', 'Reflector,6.05\'\'', 'Reflector', 'https://i.ibb.co/5sCw8nj/1301-00-7396.jpg', 'F12.4'),
-  new VbeamOpticsParts('9908-04-1220', 'FLASHLAMP,7.15mm,ENDS', 'Flash lamp', '', 'F12.4'),
-  new VbeamOpticsParts('1301-00-7395', 'Dye Cell,4mmx8mm Cleaned', 'Dye Cell', 'https://i.ibb.co/4tyh2YG/1301-00-7395.jpg', 'F12.4'),
-  new VbeamOpticsParts('1301-00-7408', 'Water Jacket,Pyrex,Sclero-LP', 'Water Jacket', 'https://i.ibb.co/n7qhM8V/1301-00-7408.jpg', 'F12.4'),
+const VbeamOptics = [
+  new VbeamOpticsParts('7122-00-3597', 'ASSY,HSG,LENS,FBR,RCPT', 'Fiber focus lens', 'https://i.ibb.co/y8X004P/7122-00-3597.jpg', 'F15.1'),
+  new VbeamOpticsParts('8050-00-2552', 'LENS,PL/CX,25.4D,50.8FL,BBAR', 'ASSY,HSG,LENS,FBR,RCPT Lens only', '', ''),
+  new VbeamOpticsParts('8050-00-2563', 'LENS,PL/CX,25.4D,63.5FL,BBAR', 'ASSY,HSG,LENS,FBR,RCPT Lens only', '', ''),
+  new VbeamOpticsParts('8010-00-0016', 'WDO,DUST,CALPORT', 'Calport window lens', 'https://i.ibb.co/N17qYDm/8010-00-0016.jpg', 'F15.1'),
+  new VbeamOpticsParts('1301-00-7496', 'Cer Disk,Calport,Sclero-LP', '', 'https://i.ibb.co/f8VmCFm/1301-00-7496.jpg', 'F12.5'),
+  new VbeamOpticsParts('8055-00-0290', 'Beamsplitter,Dual Coated', '', '', 'PM kit'),
+  new VbeamOpticsParts('8055-00-0303', 'BMSPLTR,DICHR,530/595,25.4DIA', '', '', 'PM kit'),
+  new VbeamOpticsParts('8075-00-1014', 'FIBER CBL 200UM ST/ST .37NA 24', '', 'https://i.ibb.co/X2Njc1y/8075-00-1014.jpg', 'fiber'),
+  new VbeamOpticsParts('7122-00-3747', 'ASSY,FBR CBLS,ST,VBEAM2', 'fiber wire bundle set for the CP WL HD1 HD2', '', 'F12.5'),
+  new VbeamOpticsParts('7122-00-7530', 'Assy, Head Detector', '', '', 'F11, F12.5'),
 ];
 
 // VbeamConsumableParts 객체 생성
@@ -291,8 +314,94 @@ const vbeamConsumableParts = [
   new VbeamConsumableParts('7122-00-3592', 'HANDPIECE CARTRIDGE WINDOW', 'HP window', 'https://i.ibb.co/n3xSvSb/7122-00-3592.jpg', 'F15.1'),
   new VbeamConsumableParts('7122-00-3761', 'HANDPIECE CARTRIDGE WINDOW extractor tool', 'Tool', 'https://i.ibb.co/2WfkRz3/7122-00-3761.jpg'),
   new VbeamConsumableParts('8010-00-0016', 'WDO DUST CALPORT', 'Calport window', 'https://i.ibb.co/N17qYDm/8010-00-0016.jpg'),
-  new VbeamConsumableParts('7122-00-3692', 'VBEAM PERFECTA DELIVERY SYSTEM', 'Handpiece with fiber', 'https://i.ibb.co/mbf6m4z/7122-00-3692.jpg', 'F15.1'),
+  new VbeamConsumableParts('7122-00-3692', 'VBEAM PERFECTA DELIVERY SYSTEM', 'Handpiece with fiber', 'https://i.ibb.co/mbf6m4z/7122-00-3692.jpg', 'F15.1, F1.1, F10.1, F10.2, F10.3, F10.4'),
+  new VbeamConsumableParts('8901-00-9335', 'BOM,KIT,PM,VBEAM2', 'PM', 'https://i.ibb.co/zhRw1ZD/8901-00-9335.jpg', 'PM kit'),
+  new VbeamConsumableParts('7122-00-3579', 'VBEAM 10mm DISTANCE GAUGE', '', 'https://i.ibb.co/C1gs5TP/7122-00-3579.jpg', 'F15.1, Tip'),
+  new VbeamConsumableParts('7122-00-3582', 'VBEAM 3mm DISTANCE GAUGE', '', 'https://i.ibb.co/2P9QYmw/7122-00-3582.jpg', 'F15.1, Tip'),
+  new VbeamConsumableParts('7122-00-3589', 'VBEAM 3x10mm DISTANCE GAUGE', '', 'https://i.ibb.co/4WSf366/7122-00-3589.jpg', 'F15.1, Tip'),
+  new VbeamConsumableParts('7122-00-3580', 'VBEAM 7mm DISTANCE GAUGE', '', 'https://i.ibb.co/sWcXvqN/7122-00-3580.jpg', 'F15.1, Tip'),
+  new VbeamConsumableParts('7122-00-3581', 'VBEAM 5mm DISTANCE GAUGE', '', 'https://i.ibb.co/tckpm6b/7122-00-3581.jpg', 'F15.1, Tip'),
+  new VbeamConsumableParts('7122-00-3578', 'VBEAM 12mm DISTANCE GAUGE', '', 'https://i.ibb.co/qRKvhkB/7122-00-3578.jpg', 'F15.1, Tip'),
+  new VbeamConsumableParts('7122-00-7557', 'VBEAM2,7MM,COMP.DIST GAUGE', 'PL', 'https://i.ibb.co/hmdyBsW/7122-00-7557.jpg', 'F15.1, Tip'),
+  new VbeamConsumableParts('2845-00-0814', 'SCR,BTNHD,SKT,8-32X7/8,BLK', 'Top cover , black , wranch Screw', '', 'Screw'),
+  new VbeamConsumableParts('2845-00-0808', 'SCR,BTNHD,SKT,8-32x1/2,BLK', 'Top cover , black , wranch Screw', '', 'Screw'),
+  new VbeamConsumableParts('7122-00-3770', 'WINDOW KIT,VBEAM2,25PK', '', 'https://i.ibb.co/XZjm7Gm/7122-00-3770.jpg', 'Window Lens'),
+  new VbeamConsumableParts('7122-00-3001', 'Assy,Keyswitch,Diode', '', 'https://i.ibb.co/gm7kVCS/7122-00-3001.jpg', ''),
+  new VbeamConsumableParts('1414-00-0301', 'CASTER,SWVL,LOCK,4 WHL', 'Front Wheel', '', ''),
+  new VbeamConsumableParts('1414-00-0302', 'CASTER,RGD,4 WHL', 'Rear Wheel', '', ''),
+  new VbeamConsumableParts('8095-00-0470', 'GOGGLES, PATIENT, LASER, SS, CE', '', 'https://i.ibb.co/W0TP0Zt/8095-00-0470.jpg', ''),
+  new VbeamConsumableParts('8095-00-0475', 'LASER EYEWEAR 5.2@592-597', '', 'https://i.ibb.co/9GCWQw7/8095-00-0475.jpg', ''),
+  new VbeamConsumableParts('7122-00-3643', 'VBEAM2 LASER ACCESSORIES', '', '', ''),
+  new VbeamConsumableParts('7122-00-7491', 'VBEAM ACCESSORY KIT', '', '', ''),
+];
 
+// VbeamFluidParts 객체 생성
+const VbeamFluid = [
+  new VbeamFluidParts('7122-00-3165', 'Assy,DI Filter', 'DI water filter', 'https://i.ibb.co/wwhBCGX/7122-00-3165.jpg', 'PM kit'),
+  new VbeamFluidParts('7122-00-7497', 'ASSY,DI TUBING KIT VBEAM2', '', '', 'Dye Leak, Water leak'),
+  new VbeamFluidParts('1301-00-8491', 'WTR RSVR,ROTO-MOLDED,RECT', '', 'https://i.ibb.co/6tW6SbC/1301-00-8491.jpg', 'Water tank, Water leak'),
+  new VbeamFluidParts('7122-00-9181', 'ASSY,HEAT EXCHANGER W/PWM FAN', '', '', ''),
+  new VbeamFluidParts('3412-14-0605', 'PLUG,QC,EL,DLRN/EPR,3/8BRB,VLV', '', 'https://i.ibb.co/S5cggDP/3412-14-0605.jpg', 'L shape Plug, Water leak, Dye leak'),
+  new VbeamFluidParts('3412-25-0120', 'PLUG,QC,DLRN,TWIN,1/8 BARB,EPR', '', 'https://i.ibb.co/K5H5SVX/3412-25-0120.jpg', 'Dye Leak'),
+  new VbeamFluidParts('7122-00-3723', 'ASSY TFLN TBG HTR MANF LIQ HE', '', 'https://i.ibb.co/8zn333v/7122-00-3723.jpg', 'Drain water'),
+  new VbeamFluidParts('7122-00-3725', 'ASSY,PUMP PRESS SW', 'DI water Pump press', 'https://i.ibb.co/xsFgtXw/7122-00-3725.jpg','Pressure, F7.3'),
+  new VbeamFluidParts('7122-00-3745', 'ASSY,WTR HTR TEMP PROBE,VBM2', 'Temperature sensor', 'https://i.ibb.co/bFwPSCT/7122-00-3745.jpg','F9.1'),
+  new VbeamFluidParts('3460-00-0071', 'CAP VENT 2 1/4 BUTTRESS THRD', 'cap', 'https://i.ibb.co/rs4d6Nv/3460-00-0071.jpg', ''),
+];
+
+//VbeamElectornicsParts 객체 생성
+const VbeamElectronic = [
+  new VbeamElectornicsParts('7122-00-7520', 'ASSY,CALPORT', '', 'https://i.ibb.co/gy32bh5/7122-00-7520.jpg', 'F15.1'),
+  new VbeamElectornicsParts('7122-00-0110', 'Assy Pump,Dye,Vbeam', '', '', 'F20.1'),
+  new VbeamElectornicsParts('7111-07-2696', 'ASSY, AC BOARD,VBEAM 2 ROHS', '', 'https://i.ibb.co/2sf4yXp/7111-07-2696.jpg', 'Power off, F20.1'),
+  new VbeamElectornicsParts('7111-00-2696', 'ASSY, AC BOARD,VBEAM 2 ROHS', '', 'https://i.ibb.co/2sf4yXp/7111-07-2696.jpg', 'Power off, F20.1'),
+  new VbeamElectornicsParts('7122-07-7498', 'ASSY, CPU/LSR I/O W/FW, VBEAM2','', 'https://i.ibb.co/HnzQb4p/7122-07-7498.jpg', 'F18 io'),
+  new VbeamElectornicsParts('7122-00-7498', 'ASSY, CPU/LSR I/O W/FW, VBEAM2','', 'https://i.ibb.co/HnzQb4p/7122-07-7498.jpg', 'F18 io'),
+  new VbeamElectornicsParts('7122-57-7498', 'ASSY, CPU/LSR I/O W/FW, VBEAM2','', 'https://i.ibb.co/HnzQb4p/7122-07-7498.jpg', 'F18 io'),
+  new VbeamElectornicsParts('7122-00-3803', 'ASSY,THYR,VBEAM2', 'THYRISTOR', 'https://i.ibb.co/P4q3jjS/7122-00-3803.jpg', 'F5.2'),
+  new VbeamElectornicsParts('8901-00-9421', 'VB2 THYRISTOR REPAIR KIT', 'THYRISTOR','','F5.2'),
+  new VbeamElectornicsParts('7122-00-3674', 'ASSY,IGBT', '','https://i.ibb.co/QdqZmWt/7122-00-3674.jpg','F19.1'),
+  new VbeamElectornicsParts('7122-07-3674', 'ASSY,VBEAM2, IGBT ROHS', '', 'https://i.ibb.co/QdqZmWt/7122-00-3674.jpg', 'F19.1'),
+  new VbeamElectornicsParts('7122-00-3660', 'AASSY,MANF DI,5/8 OD CRTG HTR', 'Water Heater','https://i.ibb.co/HnCPT7c/7122-00-3660.jpg','F9.1, F7.1, F7.4'),
+  new VbeamElectornicsParts('4816-01-2200', 'Diode,HV,2200V,120A,DUAL MOD', 'Set HV to zero… go into ready. Does the HVSample go up to 2875??  If so.. bad diode', 'https://i.ibb.co/hcK81DZ/4816-01-2200.jpg', 'F5.2'),
+  new VbeamElectornicsParts('7111-07-2813', 'ASSY, VB2 HV DUMP 0.7 OHM PCB ROHS', '', '', 'F19.5'),
+  new VbeamElectornicsParts('4001-01-0086', 'HVPS, 3.3KV, 3KJ/S, TRIG, SIM', '', '','F4.2, F5.1, F5.2, F14'),
+  new VbeamElectornicsParts('7122-00-3640', 'ASSY, DCD', '', 'https://i.ibb.co/Tr61032/7122-00-3640.jpg','F8.1'),
+  new VbeamElectornicsParts('7122-00-3006', 'Assy,DCD Valve,Diode', '', 'https://i.ibb.co/5RDy24X/7122-00-3006.jpg', ''),
+  new VbeamElectornicsParts('3414-00-0248 ', 'Pump, 5.3 GPM, 24VDC, 45W, Mod', '','https://i.ibb.co/MR0WT8r/3414-00-0248.jpg', ''),
+  new VbeamElectornicsParts('7122-00-9712', 'VBM2 ETX ASSY W/FW', 'LCD Display, SD5', 'https://i.ibb.co/x6G8t4q/7122-00-9712.jpg', 'Black screen'),
+  new VbeamElectornicsParts('7111-07-2701', 'ASSY,BOM,DYE CRTG ID BD,VB2 RoHS', '', 'https://i.ibb.co/DWrWrmX/7111-07-2701.png', ''),
+  new VbeamElectornicsParts('7122-00-7526', 'ASSY,HARN,SIG,VBEAM2', '', '', 'cable'),
+  new VbeamElectornicsParts('7122-00-7533', 'ASSY,HARNESS,HV', '', '', 'cable'),
+  new VbeamElectornicsParts('7111-07-2510', 'ASSY, PCB, HP BULKHEAD ROHS', '', 'https://i.ibb.co/fXk6Txh/7111-07-2510.jpg', 'F10.1, F10.3, F10.2'),
+  new VbeamElectornicsParts('5609-00-0200', 'XFMR,STPDN,115/230P,28V,250VA', '', 'https://i.ibb.co/p3d5GKw/5609-00-0200.jpg', ''),
+];
+
+//VbeamMdyeParts 객체 생성
+const VbeamMdye = [
+  new VbeamMdyeParts('7122-00-0080', 'Assy,Rsvr,Dye,Vbeam', '', 'https://i.ibb.co/JcqxwGC/7122-00-0080.jpg', 'Jar, Water leaking'),
+  new VbeamMdyeParts('7122-00-3777', 'VBM2 FIELD SERV MDYE CRTG REPL', 'Mdye Cartridge', 'https://i.ibb.co/G04VkwJ/7122-00-3777.jpg', 'F12.4, F12.1, Low energy'),
+  new VbeamMdyeParts('7122-00-9517', 'GROUND VBEAM DYE HAZMAT RETURN', '', '', 'F12.4, F12.1, Low energy'),
+  new VbeamMdyeParts('7122-00-1010', 'Assy,Box n Box,HZRD,Ship,Empty', '', 'https://i.ibb.co/RDBgCsB/7122-00-1010.jpg', 'Removal'),
+  new VbeamMdyeParts('7121-00-2270', 'BOM,BTL ASSY,COT INJECTOR', '', 'https://i.ibb.co/L6rWkS4/7121-00-2270.jpg', 'F12.4, F12.1, Low energy'),
+  new VbeamMdyeParts('7122-00-9516', 'AIR VBEAM DYE HAZMAT RETURN KIT', 'Air, FSE needs to drop the box off to Fedex Hub ', '', 'Air'),
+  new VbeamMdyeParts('7121-00-2860', 'BOM,SOLVENT ASSY,2.01,SPTL-1b', '', 'https://i.ibb.co/vPb6jV1/7121-00-2860.jpg', 'F12.4'),
+  new VbeamMdyeParts('3412-28-0003', 'CPL,BLK HD,QC,PLYSLFN,3/8 BARB', 'Dye Cartridge Bulk Head', 'https://i.ibb.co/LZDd5xG/3412-28-0003.jpg', 'Dye Leak'),
+  new VbeamMdyeParts('7122-00-3722', 'ASSY,TFLN TBG DYE RSVR TO PUMP', '', 'https://i.ibb.co/PcJvK8j/7122-00-3722.jpg', 'Dye Leak'),
+  new VbeamMdyeParts('3414-00-0190', 'BELLOWS PUMP,3/4\'\'MTR,24VDC/\nVBEAM2', '', 'https://i.ibb.co/gJnjYPy/3414-00-0190.jpg', 'F24.3'),
+  new VbeamMdyeParts('3450-00-0280', 'DYE RESERVOIR CARBON FILTER', '', 'https://i.ibb.co/Mk8SW5h/3450-00-0280.jpg', 'Dye Smell'),
+  new VbeamMdyeParts('3410-64-0806', 'Tee,M BR,White PP,1/2x3/8 Barb', 't fitting', 'https://i.ibb.co/7bgXmQD/3410-64-0806.jpg', 'Dye Leak'),
+  new VbeamMdyeParts('3408-13-0606', 'Hose,Barb,SS,3/8NPTx3/8 Barb', '', 'https://i.ibb.co/VxS5qsD/3408-13-0606.jpg', 'Dye Leak'),
+  new VbeamMdyeParts('1301-08-8573', 'COVER,DYE CRTG,ASSY,COOL GREY', '', '', 'F20.2'),
+  new VbeamMdyeParts('7122-00-3701', 'ASSY,CBL DYE CRTG TO CHASSIS', '', 'https://i.ibb.co/6tT5Xfh/7122-00-3701.jpg', ''),
+  new VbeamMdyeParts('1301-00-8585 ', 'HDW KIT,HIGH DRBLTY DRWR CONN', '', 'https://i.ibb.co/pJBP3QG/1301-00-8585.jpg', ''),
+];
+
+const VbeamServiceTool = [
+  new VbeamServiceToolParts('7122-00-3779', 'VBEAM2 VERIFICATION TOOL', '', '', ''),
+  new VbeamServiceToolParts('7122-00-3363', 'ASSY,TOOL,ALIGN,CROSSHAIR,MGL', '', 'https://i.ibb.co/nn0snD3/7122-00-3363.jpg', ''),
+  new VbeamServiceToolParts('7122-00-3840', 'ASSY, HOYA V-10, WL MEASURE', 'Wavelength cal tool', 'https://i.ibb.co/3kgkbLr/7122-00-3840.jpg', ''),
+  new VbeamServiceToolParts('1301-00-5923', 'WRENCH,MIRROR', '', 'https://i.ibb.co/fDvNWx5/1301-00-5923.jpg', ''),
 ];
 
 // PrimaHeadParts 객체 생성
@@ -415,7 +524,7 @@ app.get('/part/:info', (req, res) => {
   } else if (partType === 'gmpp') {
     parts = [...gmpphd, ...opticsParts, ...consumableParts, ...electronicsParts, ...fluidSystem, ...headParts,  ...gmpcalport, ...gmptool];
   } else if (partType === 'vbeam') {
-    parts = [...vbeamOpticsParts, ...vbeamConsumableParts];
+    parts = [...VbeamHead, ...vbeamConsumableParts, ...VbeamFluid, ...VbeamElectronic, ...VbeamMdye, ...VbeamOptics, ...VbeamServiceTool];
   } else if (partType === 'prima') {
     parts = [...primaHeadParts, ...primaMDYEPart];
   } else if (partType === 'picoway') {
@@ -436,8 +545,13 @@ app.get('/part/:info', (req, res) => {
       ...gmpcalport,
       ...gmptool,
       ...gmpphd,
-      ...vbeamOpticsParts,
+      ...VbeamHead,
       ...vbeamConsumableParts,
+      ...VbeamFluid,
+      ...VbeamElectronic,
+      ...VbeamMdye,
+      ...VbeamOptics,
+      ...VbeamServiceTool,
       ...primaHeadParts,
       ...primaMDYEPart,
       ...picowayArmParts,
