@@ -130,7 +130,7 @@ const consumableParts = [
   new GmpConsumableparts('7122-00-9565', 'DHP ACCESSORY KIT ASSY', '', '', ''),
   new GmpConsumableparts('7122-00-9527', 'VELCRO STRAP KIT', '', '', ''),
   new GmpConsumableparts('8095-00-0476', 'PF1 EYEWEAR 755/1064 OD7 CE', 'Operator goggles', 'https://i.ibb.co/2P1q8g4/8095-00-0476.jpg', ''),
-  new GmpConsumableparts('8095-00-0470', 'GOGGLES, PATIENT, LASER, SS, CE', '', 'https://i.ibb.co/gjHqNJd/8095-00-0470.jpg', ''),
+  new GmpConsumableparts('8095-00-0470', 'GOGGLES, PATIENT, LASER, SS, CE', '', 'https://i.ibb.co/W0TP0Zt/8095-00-0470.jpg', ''),
   new GmpConsumableparts('4050-05-0002', 'PLUG,2 POS,5.08MM,SCREW TERM', '', 'https://i.ibb.co/HY19Rb2/4050-05-0002.jpg', ''),
   new GmpConsumableparts('4050-05-0003', 'Jumper,2 POS,5.08mm', '', 'https://i.ibb.co/Mf3tyzD/4050-05-0003.jpg', ''),
 ];
@@ -313,8 +313,8 @@ const VbeamOptics = [
 const vbeamConsumableParts = [
   new VbeamConsumableParts('7122-00-3592', 'HANDPIECE CARTRIDGE WINDOW', 'HP window', 'https://i.ibb.co/n3xSvSb/7122-00-3592.jpg', 'F15.1'),
   new VbeamConsumableParts('7122-00-3761', 'HANDPIECE CARTRIDGE WINDOW extractor tool', 'Tool', 'https://i.ibb.co/2WfkRz3/7122-00-3761.jpg'),
-  new VbeamConsumableParts('8010-00-0016', 'WDO DUST CALPORT', 'Calport window', 'https://i.ibb.co/N17qYDm/8010-00-0016.jpg'),
   new VbeamConsumableParts('7122-00-3692', 'VBEAM PERFECTA DELIVERY SYSTEM', 'Handpiece with fiber', 'https://i.ibb.co/mbf6m4z/7122-00-3692.jpg', 'F15.1, F1.1, F10.1, F10.2, F10.3, F10.4'),
+  new VbeamConsumableParts('FIN100984', 'VBEAM PERFECTA DELIVERY SYSTEM', 'Refurbished', 'https://i.ibb.co/mbf6m4z/7122-00-3692.jpg', 'F15.1, F1.1, F10.1, F10.2, F10.3, F10.4'),
   new VbeamConsumableParts('8901-00-9335', 'BOM,KIT,PM,VBEAM2', 'PM', 'https://i.ibb.co/zhRw1ZD/8901-00-9335.jpg', 'PM kit'),
   new VbeamConsumableParts('7122-00-3579', 'VBEAM 10mm DISTANCE GAUGE', '', 'https://i.ibb.co/C1gs5TP/7122-00-3579.jpg', 'F15.1, Tip'),
   new VbeamConsumableParts('7122-00-3582', 'VBEAM 3mm DISTANCE GAUGE', '', 'https://i.ibb.co/2P9QYmw/7122-00-3582.jpg', 'F15.1, Tip'),
@@ -513,7 +513,7 @@ const Nordlysfluid = [
 ];
 
 app.get('/part/:info', (req, res) => {
-  const info = req.params.info;
+  const info = req.params.info.toLowerCase(); // Convert the search term to lowercase
   const partType = req.query.partType; // Get the selected part type from the query parameter
 
   let results = [];
@@ -586,18 +586,18 @@ app.get('/part/:info', (req, res) => {
       objectName = objectName.replace('GMAXPROPLUS', 'GmaxProPlus'); // Replace 'PICOWAY' with 'Picoway'
     }
 
+    const partNumber = part['Part Number'].toLowerCase(); // Convert the part number to lowercase
+    const partName = part['Part Name'].toLowerCase(); // Convert the part name to lowercase
+    const description = part['Description'].toLowerCase(); // Convert the description to lowercase
+    const fault = part['Fault'].toLowerCase(); // Convert the fault to lowercase
 
-
-
+    // Check if any of the lowercase properties contains the search term
     if (
-      part['Part Number'].toLowerCase().startsWith(info) || // 검색어와 데이터를 소문자로 변환하여 비교
-      part['Part Number'].toLowerCase().endsWith(info) ||
-      part['Part Name'].toLowerCase().includes(info) ||
-      part['Description'].toLowerCase().startsWith(info) ||
+      partNumber.includes(info) ||
+      partName.includes(info) ||
+      description.includes(info) ||
       objectName.toLowerCase().includes(info) ||
-      part['Description'].toLowerCase().includes(info) ||
-      part['Fault'].toLowerCase().includes(info)
-
+      fault.includes(info)
     ) {
       const result = {
         'Part Number': part['Part Number'],
