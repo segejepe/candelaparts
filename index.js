@@ -27,7 +27,7 @@ class GmpHandpieceparts extends Part { }
 class GmpControllerparts extends Part { }
 class GmpSkinParts extends Part { }
 class GmpCalportParts extends Part { }
-class GmpServiceTool extends Part { s}
+class GmpServiceTool extends Part { }
 
 // Gmax pro Plus
 class GmppHandpieceparts extends Part { }
@@ -42,8 +42,19 @@ class VbeamOpticsParts extends Part { }
 class VbeamServiceToolParts extends Part { }
 
 // Prima
-class PrimaHeadParts extends Part { } // Add PrimaHeadParts class
+class PrimaDyeHeadParts extends Part { } // Add PrimaDyeHeadParts class
 class PrimaMDYEPart extends Part { } // Add PrimaMDYEPart class
+class PrimaCalportParts extends Part { }
+class PrimaHeadrailParts extends Part { }
+class PrimaV14UpgardParts extends Part { }
+class PrmiaElectronicParts extends Part { }
+class PrimaCableParts extends Part { }
+class PrimaSkinParts extends Part { }
+class PrimaConsumableParts extends Part { }
+class PrimaYagHeadParts extends Part { }
+class PrimaHandpieceParts extends Part { }
+class PrimaFluidsystemParts extends Part { }
+class PrimaServicetoolsParts extends Part { }
 
 //Picoway
 class PicowayArmParts extends Part { }
@@ -148,7 +159,7 @@ const electronicsParts = [
   new GmpElectronicsparts('7122-00-3330', 'Assy,Linecord,MGL', '', 'https://i.ibb.co/xDqZQH3/7122-00-3330.jpg', ''),
   new GmpElectronicsparts('7122-00-9235', 'ASSY DCD MODULE SPECTRUM', '', 'https://i.ibb.co/BZDVkjJ/7122-00-9235.jpg', 'F8.2, F8.4, F9.2'),
   new GmpElectronicsparts('7111-07-2520', 'Assy,BOM,RoHS PCB,DCD Canister', '', 'https://i.ibb.co/1Ts66Zq/7111-07-2520.jpg', ''),
-  new GmpElectronicsparts('3409-02-0200', 'FERRULE,SET,1/8T,NYLON', '', 'https://i.ibb.co/VmnJ7SC/3409-02-0200.jpg', ''),
+  new GmpElectronicsparts('3409-02-0200', 'FERRULE,SET,1/8T,NYLON', '', 'https://i.ibb.co/VmnJ7SC/3409-02-0200.jpg', 'DCD'),
   new GmpElectronicsparts('1301-00-8462', 'CLIP SPR DCD', '', 'https://i.ibb.co/jW4H8MZ/1301-00-8462.jpg', ''),
   new GmpElectronicsparts('3412-26-0220', 'CONN,QC,RCPT,BR,BLKHD,1/8T', '', '', ''),
   new GmpElectronicsparts('7111-20-2803', 'PRGRM PRO 1-WIRE ALEX HEAD PCB', '', '', 'F26.1, F23'),
@@ -394,7 +405,8 @@ const VbeamMdye = [
   new VbeamMdyeParts('3408-13-0606', 'Hose,Barb,SS,3/8NPTx3/8 Barb', '', 'https://i.ibb.co/VxS5qsD/3408-13-0606.jpg', 'Dye Leak'),
   new VbeamMdyeParts('1301-08-8573', 'COVER,DYE CRTG,ASSY,COOL GREY', '', '', 'F20.2'),
   new VbeamMdyeParts('7122-00-3701', 'ASSY,CBL DYE CRTG TO CHASSIS', '', 'https://i.ibb.co/6tT5Xfh/7122-00-3701.jpg', ''),
-  new VbeamMdyeParts('1301-00-8585 ', 'HDW KIT,HIGH DRBLTY DRWR CONN', '', 'https://i.ibb.co/pJBP3QG/1301-00-8585.jpg', ''),
+  new VbeamMdyeParts('1301-00-8585', 'HDW KIT,HIGH DRBLTY DRWR CONN', '', 'https://i.ibb.co/pJBP3QG/1301-00-8585.jpg', ''),
+  new VbeamMdyeParts('7123-00-0523', 'Assy Reservoir Dye, Velos', '', 'https://i.ibb.co/7kLr5tm/7123-00-0523.png', 'Dye Leak'),
 ];
 
 const VbeamServiceTool = [
@@ -404,25 +416,183 @@ const VbeamServiceTool = [
   new VbeamServiceToolParts('1301-00-5923', 'WRENCH,MIRROR', '', 'https://i.ibb.co/fDvNWx5/1301-00-5923.jpg', ''),
 ];
 
-// PrimaHeadParts 객체 생성
-const primaHeadParts = [
-  new PrimaHeadParts('1303-00-0734', 'DUAL LAMP REFLECTOR END RAIL', 'Ceramic', '', 'F6.1, F12.4'),
-  new PrimaHeadParts('1303-00-0737', 'DUAL LAMP REFLECTOR BODY RAIL', 'Ceramic', '', 'F6.1, F12.4'),
-  new PrimaHeadParts('9908-17-0411', 'FLASH LAMP, 7.15 ENDS, RAIL VE', 'Flash lamp', '', 'F6.1, F12.4'),
-  new PrimaHeadParts('1303-00-0735', 'DUAL FLASHLAMP FLOW TUBE, RAIL', 'NA', '', 'F6.1, F12.4'),
-  new PrimaHeadParts('1303-00-0736', 'DUAL LAMP DYE CELL, RAIL VELOS', 'NA', '', 'F6.1, F12.4'),
-  new PrimaHeadParts('8005-00-2017', 'Mirror HR @ 585-605 nm 10.8 m', 'NA', '', 'F6.1, F12.4'),
-  new PrimaHeadParts('8001-00-0004', 'Mirror PR 87% @ 585-605 nm 10', 'NA', '', 'F6.1, F12.4'),
-  new PrimaHeadParts('3160-01-0010', 'O-RNG WHTSIL 1/4\'\'ID 3/8\'\'OD', 'DYE Flash lamp Oring', '', 'F6.1, F12.4'),
-  new PrimaHeadParts('3160-02-9026', 'O-Ring,Clear Silicon 0.315x 0.049 S70', 'Under PR or HR', '', 'F6.1, F12.4'),
+// Prima Dye HeadParts 객체 생성
+const PrimaDyeHead = [
+  // new PrimaDyeHeadParts('', '', '', '', ''),
+  new PrimaDyeHeadParts('1303-00-0734', 'DUAL LAMP REFLECTOR END RAIL', 'Ceramic, Need 2ea', 'https://i.ibb.co/TT1cCg4/1303-00-0734.png', 'F6.1, F12.4, F12.1'),
+  new PrimaDyeHeadParts('1303-00-0737', 'DUAL LAMP REFLECTOR BODY RAIL', 'Ceramic, Need 1ea', 'https://i.ibb.co/1nN6g6V/1303-00-0737.png', 'F6.1, F12.4, F12.1'),
+  new PrimaDyeHeadParts('9908-17-0411', 'FLASH LAMP, 7.15 ENDS, RAIL VE', 'Flash lamp, Need 2ea', 'https://i.ibb.co/c15HXwv/9908-17-0411.png', 'F6.1, F12.4, F12.1, F14.1'),
+  new PrimaDyeHeadParts('1303-00-0735', 'DUAL FLASHLAMP FLOW TUBE, RAIL', 'Need 2ea', '', 'F6.1, F12.4, F12.1'),
+  new PrimaDyeHeadParts('1303-00-0736', 'DUAL LAMP DYE CELL, RAIL VELOS', 'Need 1ea', 'https://i.ibb.co/L6GdwYP/1303-00-0736.png', 'F6.1, F12.4, F12.1'),
+  new PrimaDyeHeadParts('8005-00-2017', 'Mirror HR @ 585-605 nm 10.8 m', 'Need 1ea', 'https://i.ibb.co/1sRmz6L/8005-00-2017.png', 'F6.1, F12.4, F12.1'),
+  new PrimaDyeHeadParts('8001-00-0004', 'Mirror PR 87% @ 585-605 nm 10', 'Need 1ea', 'https://i.ibb.co/dbbKDCb/8001-00-0004.png', 'F6.1, F12.4, F12.1'),
+  new PrimaDyeHeadParts('3160-01-0010', 'O-RNG WHTSIL 1/4\'\'ID 3/8\'\'OD', 'DYE Flash lamp Oring Need 4ea', 'https://i.ibb.co/pZXSwhx/3160-01-0010.png', 'F6.1, F12.4, F12.1'),
+  new PrimaDyeHeadParts('3160-02-9026', 'O-Ring,Clear Silicon 0.315x 0.049 S70', 'Under PR or HR Need 2ea', 'https://i.ibb.co/jTvY7PF/3160-02-9026.png', 'F6.1, F12.4, F12.1'),
+  new PrimaDyeHeadParts('3160-01-1171', 'O-ring, white, 1.5” ID, 1 3/4” OD', 'Dye head rebuild part White o-ring for reflector end Need 2ea', 'https://i.ibb.co/Gt8mzpM/3160-01-1171.png', 'F6.1, F12.4, F12.1'),
+  new PrimaDyeHeadParts('3160-01-0011', 'O-ring, white, 5/16” ID, 7/16” OD', 'Dye head rebuild part White o-ring for dye cell Need 2ea', 'https://i.ibb.co/SXDyZjg/3160-01-0011.png', 'F6.1, F12.4, F12.1'),
+  new PrimaDyeHeadParts('3160-01-0012', 'O-ring, white, 3/8” ID, 1/2” OD', 'Dye head rebuild part White o-ring for flash lamps Need 4ea', 'https://i.ibb.co/rfXGPRQ/3160-01-0012.png', 'F6.1, F12.4, F12.1'),
+  new PrimaDyeHeadParts('2832-OC-0820', 'SCR,CAP,SOC HD 8-32 x 1-14', '', 'https://i.ibb.co/k2q7GYh/2832-OC-0820.png', ''),
+  new PrimaDyeHeadParts('1303-00-0733', 'DUAL LAMP OUTER BODY, RAIL VELOS', '', 'https://i.ibb.co/M9cjDz5/1303-00-0733.png', ''),
+  new PrimaDyeHeadParts('1303-00-0662', 'Dual Lamp End Block, Left, Vel', '', 'https://i.ibb.co/TvSqsyc/1303-00-0662.png', ''),
+  new PrimaDyeHeadParts('1303-00-1128', 'DUAL LAMP MIRROR CUP REF. RAIL', '', 'https://i.ibb.co/mCrVV5W/1303-00-1128.png', ''),
+  new PrimaDyeHeadParts('1303-00-0726', 'MIRROR CUP LOCK PLATE, RAIL VE', '', 'https://i.ibb.co/hKjqW9x/1303-00-0726.png', ''),
+  new PrimaDyeHeadParts('2832-00-0203', 'SCR,CAP,SOC HD 2-56 X 316', '', 'https://i.ibb.co/60Xg4Jg/2832-00-0203.png', ''),
+  new PrimaDyeHeadParts('1303-00-0732', 'DUAL LAMP END CAP, RAIL VELOS', '', 'https://i.ibb.co/kmNPtb7/1303-00-0732.png', ''),
+  new PrimaDyeHeadParts('3406-89-0806', 'Adptr,12"ID Barb x38Tube End', '', 'https://i.ibb.co/SJ50q5S/3406-89-0806.png', ''),
+  new PrimaDyeHeadParts('3406-89-0808', 'ADPTR,1/2ID BARB x 1/2TUBE END', '', 'https://i.ibb.co/qCvWk9S/3406-89-0808.png', ''),
+  new PrimaDyeHeadParts('3406-40-0602', 'ELBOW,MALE 3/8T x 1/8MPT SS', '', 'https://i.ibb.co/wNk5HF7/3406-40-0602.png', ''),
+  new PrimaDyeHeadParts('3406-41-0804', 'ELBOW,MALE, 45 DEGREE, 1/2x1/4 NPT,SS', '', 'https://i.ibb.co/bBsG4Cw/3406-41-0804.jpg', ''),
+  new PrimaDyeHeadParts('1303-00-0728', 'DUAL LAMP FLOW BLOCK, LEFT, RAIL VELOS', '', 'https://i.ibb.co/xggZ8Cq/1303-00-0728.png', ''),
+  new PrimaDyeHeadParts('1303-00-0730', 'DUAL LAMP FLOW BLOCK, RIGHT, RAIL VELOS', '', 'https://i.ibb.co/mh76p7s/1303-00-0730.png', ''),
+  new PrimaDyeHeadParts('1303-00-0749', 'DUAL LAMP HV SHIELD, LEFT', '', 'https://i.ibb.co/H2h58t3/1303-00-0749.png', ''),
+  new PrimaDyeHeadParts('1303-00-0748', 'DUAL LAMP HV SHIELD, RIGHT', '', 'https://i.ibb.co/0r0PtDm/1303-00-0748.png', ''),
+  new PrimaDyeHeadParts('7123-00-0215', 'ASSY, LASER HEAD DYE, PRIMA', '', 'https://i.ibb.co/k9MhmRQ/7123-00-0215.png', ''),
+
 ];
 
 // PrimaMDYEPart 객체 생성
-const primaMDYEPart = [
-  new PrimaMDYEPart('7122-00-9517', 'GROUND VBEAM DYE HAZMAT RETURN', 'HAZMAT RETURN', '', 'F6.1, F12.4'),
-  new PrimaMDYEPart('7121-00-2270', 'COT INJECTOR', 'COT', '', 'F6.1, F12.4'),
-  new PrimaMDYEPart('7123-00-0559', 'PRIMA DYE CRTG REPLACEMENT KIT', 'CRTG', '', 'F6.1, F12.4'),
+const PrimaMDYE = [
+  new PrimaMDYEPart('7122-00-9517', 'GROUND VBEAM DYE HAZMAT RETURN', 'HAZMAT RETURN', '', 'F6.1, F12.4, F12.1'),
+  new PrimaMDYEPart('7121-00-2270', 'COT INJECTOR', 'COT', 'https://i.ibb.co/2NS1TV4/7121-00-2270.png', 'F6.1, F12.4, F12.1'),
+  new PrimaMDYEPart('7123-00-0559', 'PRIMA DYE CRTG REPLACEMENT KIT', 'CRTG', 'https://i.ibb.co/M7Fxg4Y/7123-00-0488.png', 'F6.1, F12.4, F12.1'),
+  new PrimaMDYEPart('7123-00-0276', 'Assembly, Velos, Cot Tubing Kit', '', 'https://i.ibb.co/XF4xbz7/7123-00-0276.png', 'Dye leaking'),
 ];
+
+const PrimaCalport = [
+  new PrimaCalportParts('8010-00-0015', 'WINDOW,CALPORT,MGL', '', 'https://i.ibb.co/VVZJMbb/8010-00-0015.png', ''),
+  new PrimaCalportParts('7123-00-0529', 'Assy, Calport, Prima', '', 'https://i.ibb.co/m59mBDX/7123-00-0529.png', ''),
+  new PrimaCalportParts('7123-00-0528', 'Assy, CalPort Receiver', '', 'https://i.ibb.co/BL01KQz/7123-00-0528.png', ''),
+];
+
+const PrimaHeadrail = [
+  new PrimaHeadrailParts('7123-00-0186', 'Assy, Beam Blocker, Velos', 'Shutter', 'https://i.ibb.co/nwsDrBy/7123-00-0186.png', 'F3.1'),
+  new PrimaHeadrailParts('8015-00-1252', 'Mirror Shutter, Velos', '', '', ''),
+  new PrimaHeadrailParts('7123-00-0380', 'Imaging Lens Fixture Assembly', '595 Head PR&HR 12mm brun jib', 'https://i.ibb.co/NWhxHGt/7123-00-0380.png', ''),
+  new PrimaHeadrailParts('8050-00-2552', 'LENS,PL/CX,25.4D,50.8FL,BBAR', '', '', ''),
+  new PrimaHeadrailParts('7123-00-0505', 'Dye Beam-Expanding Lens Tool', '', '', ''),
+  new PrimaHeadrailParts('7123-00-0187', 'Assy, Second Detector, Velos', 'Head Detector', 'https://i.ibb.co/wN1t3t8/7123-00-0187.png', 'F12.7, F12.6'),
+  new PrimaHeadrailParts('7123-00-0183', 'Assy,Head Detector, PRIMA', 'Head Detector', 'https://i.ibb.co/ByG1F0Z/7123-00-0183.png', 'F12.7, F12.6'),
+  new PrimaHeadrailParts('7123-00-0185', 'Assy, Mirror Holder, Fiber Rec', 'Launch mirror Assy', 'https://i.ibb.co/1qj0d25/7123-00-0185.png', ''),
+  new PrimaHeadrailParts('8015-00-1256', 'Mirror, 31 mm dia HR 595 1064', 'Lens Only', 'https://i.ibb.co/NY8pVXr/8015-00-1256.png', ''),
+  new PrimaHeadrailParts('7123-00-0184', 'Assy, Lens Housing, Fiber Rece', '', 'https://i.ibb.co/Xt57vvB/7123-00-0184.png', ''),
+  new PrimaHeadrailParts('7123-00-0676', 'Assembly, Turning Mirror Dyle', 'Ver 1.4', '', ''),
+  new PrimaHeadrailParts('7123-00-0675', 'Assembly, Adapter, Beam Compen', 'Ver 1.4', '', 'F12.7'),
+  new PrimaHeadrailParts('8050-00-9095', 'Lens, PL/CX D25.4 F200.0 AR585-605', 'Lens for 7123-00-0675', '', 'F12.7'),
+  new PrimaHeadrailParts('7123-00-0551', 'ASSY , FIBER RECEPTACLE, VELOS', '', 'https://i.ibb.co/Q6FtrF5/7123-00-0551.png', ''),
+  new PrimaHeadrailParts('7123-00-0101', 'ASSY, GREEN DIODE', '', 'https://i.ibb.co/CtsQrRS/7123-00-0101.png', 'aiming beam'),
+];
+
+const PrimaV14Upgrade = [
+  new PrimaV14UpgardParts('2981-05-0120', 'SPR,CANTED COIL,..880ID,.181H', '', '', ''),
+  new PrimaV14UpgardParts('8901-00-9953', 'Kit, Vbeam Prima, Wiring Updates', '', '', ''),
+  new PrimaV14UpgardParts('8901-00-9952', 'Kit_Service_PRIMA_ V 1.4', '', '', ''),
+];
+
+const PrimaElectronic = [
+  // new PrmiaElectronicParts('', '', '', '', ''),
+  new PrmiaElectronicParts('7122-00-3803', 'ASSY,THYR,VBEAM2', '', 'https://i.ibb.co/P4q3jjS/7122-00-3803.jpg', ''),
+  new PrmiaElectronicParts('7123-00-0233', 'ASSY, IGBT HEATSINK, VELOS', '', 'https://i.ibb.co/hyYqDHz/7123-00-0233.png', 'F5.3, F19.1'),
+  new PrmiaElectronicParts('4001-01-0097', 'HVPS, 2.9KV, 3KJ/s, DUAL SIMM', 'VBEAM Prima HVPS', 'https://i.ibb.co/rmkpPy1/4001-01-0097.png', 'F4.2, F5.1, F5.2, F14.1'),
+  new PrmiaElectronicParts('7123-00-0427', 'Choke Assy', '', 'https://i.ibb.co/t8NgKqr/7123-00-0427.png', ''),
+  new PrmiaElectronicParts('7123-00-0533', 'ASSY, PCB, CPU I/O w/FW VELOS', 'IO Board (Software include?)', 'https://i.ibb.co/wLxJDNZ/7123-00-0533.png', 'F7.4, F18.1, F18.2, F21.1, F26.1, F26.2, F26.3, F27.1'),
+  new PrmiaElectronicParts('7123-00-0487', 'ASSY, DISPLAY,Vbeam PRIMA', '', 'https://i.ibb.co/34PMq84/7123-00-0487.png', ''),
+  new PrmiaElectronicParts('7111-07-2802', 'ASSY, FIBER RECEPTACLE PCB, RO', '', 'https://i.ibb.co/sQY3ygc/7111-07-2802.png', ''),
+  new PrmiaElectronicParts('7111-23-2803', 'PRGRM UNIVERSAL LIN PCB', '', '', ''),
+  new PrmiaElectronicParts('7123-00-0442', 'ASSY, DCD MODULE', '', 'https://i.ibb.co/WD7qXs5/7123-00-0442.png', 'F1.2, F8.2, F9.2'),
+  new PrmiaElectronicParts('7123-00-0045', 'ASSY, STOP SWITCH', '', 'https://i.ibb.co/fn63C56/7123-00-0045.png', ''),
+  new PrmiaElectronicParts('7111-07-2873', 'ASSY, VELOS AC CONTROL PCB', '', 'https://i.ibb.co/dW2QH7P/7111-07-2873.png', 'F9.1'),
+  new PrmiaElectronicParts('7111-07-2882', 'ASSY, VELOS DUMP PCB', '', 'https://i.ibb.co/2nrvhmP/7111-07-2882.png', 'F5.3'),
+];
+
+const PrimaCable = [
+  new PrimaCableParts('7123-00-0292', 'ASSY VBEAM Prima SIGNAL HARNESS', '', 'https://i.ibb.co/zP3j63K/7123-00-0292.png', 'cable, F12.6'),
+  new PrimaCableParts('7123-00-0418', 'ASSY POF HARNESS BUNDLE VELOS', '', 'https://i.ibb.co/ZMpJ8Fs/7123-00-0418.png', 'cable'),
+  new PrimaCableParts('7123-00-0438', 'ASSY VELOS HV SECTION 24V HARN', '', 'https://i.ibb.co/ncctKpr/7123-00-0438.png', 'cable'),
+  new PrimaCableParts('7123-00-0294', 'ASSY VELOS HV HARNESS', '', 'https://i.ibb.co/y8fS80y/7123-00-0294.png', 'cable'),
+  new PrimaCableParts('7123-00-0293', 'ASSY VELOS AC HARNESS', '', 'https://i.ibb.co/4JPVjf9/7123-00-0293.png', 'cable'),
+];
+
+const PrimaSkin = [
+  // new PrimaSkinParts('', '', '', '', ''),
+  new PrimaSkinParts('1414-00-0313', 'CASTER, W/ BEARING SWVL, 4 in DIA, LOCK, WHITE W/GRAY WHEEL', 'Front wheel', 'https://i.ibb.co/2qhtkYm/1414-00-0313.png', ''),
+  new PrimaSkinParts('7123-00-0468', 'Top Cover', '', 'https://i.ibb.co/1KrBSvw/7123-00-0468.png', ''),
+  new PrimaSkinParts('7123-00-0508', 'ASSY ,SHORT ARM SUPPORT ,VELOS', '', 'https://i.ibb.co/KL5q3vX/7123-00-0508.png', ''),
+  new PrimaSkinParts('7123-00-0073', 'ASSY, BEARING BLOCK, ARM, HELO', '', '', ''),
+  new PrimaSkinParts('1303-00-0806', 'PLUG,RAIL DUST COVER, VELOS', '', 'https://i.ibb.co/6PqdTn7/1303-00-0806.png', ''),
+  new PrimaSkinParts('1303-00-1008', 'FRONT COVER, VBEAM PRIMA', '', 'https://i.ibb.co/X83XZRy/1303-00-1008.png', ''),
+  new PrimaSkinParts('1303-00-1009', 'LEFT SIDE COVER, VBEAM PRIMA', '', 'https://i.ibb.co/xJ6zM40/1303-00-1009.png', ''),
+  new PrimaSkinParts('1303-00-1010', 'RIGHT SIDE COVER, VBEAM PRIMA', '', 'https://i.ibb.co/yPXsgFZ/1303-00-1010.png', ''),
+];
+
+const PrimaConsumable = [
+  // new PrimaConsumableParts('', '', '', '', ''),
+  new PrimaConsumableParts('8901-00-9949', 'PM KIT, VBEAM PRIMA', '', '', ''),
+  new PrimaConsumableParts('7123-00-0402', 'ASSY, REMOVABLE WINDOW HOLDER', '', 'https://i.ibb.co/wCKRm3Z/7123-00-0402.png', ''),
+  new PrimaConsumableParts('7123-00-0521', 'ASSY, DCD DISTANCE GAUGE KIT', '', 'https://i.ibb.co/XpJnf6t/7123-00-0521.png', ''),
+  new PrimaConsumableParts('7123-00-0522', 'ASSY, WINDOW KIT, PRIMA', 'Window lens for Distance gauge', '', ''),
+  new PrimaConsumableParts('2157-40-8716', 'LABEL, WALL SIGN, PRIMA', '', 'https://i.ibb.co/nQPsKGF/2157-40-8716.png', ''),
+  new PrimaConsumableParts('3430-02-0010', 'CRYOGEN RELEASE VALVE', '', 'https://i.ibb.co/ZNhXfrK/3430-02-0010.jpg', ''),
+  new PrimaConsumableParts('5103-00-0030', 'FOOTSWITCH', '', 'https://i.ibb.co/t3JwqRs/5103-00-0030.png', 'F13.2, F13.4'),
+  new PrimaConsumableParts('7123-00-0374', 'ASSY, DISTANCE GAUGE, 3-7mm,', '', 'https://i.ibb.co/LzVzK3P/7123-00-0374.png', 'tip'),
+  new PrimaConsumableParts('7123-00-0375', 'ASSY, DISTANCE GAUGE, 7-11mm,', '', 'https://i.ibb.co/dtJ4L8L/7123-00-0375.png', 'tip'),
+  new PrimaConsumableParts('7123-00-0403', 'ASSY, 11-15mm DISTANCE GAUGE,', '', 'https://i.ibb.co/xL3pf2Z/7123-00-0403.png', 'tip'),
+  new PrimaConsumableParts('7123-00-0478', 'ASSY, DISTANCE GAUGE, 3 X 10MM', '', 'https://i.ibb.co/zVw54R8/7123-00-0478.png', 'tip'),
+  new PrimaConsumableParts('7123-00-0567', 'ASSY, DISTANCE GAUGE, 1.5MM, DCD HP, PRIMA', 'Yag Only', 'https://i.ibb.co/hmGd0Pv/7123-00-0567.png', 'tip'),
+  new PrimaConsumableParts('7123-00-0494', 'ASSY, TOOL, WINDOW EXTRACTOR,', '', 'https://i.ibb.co/Jp6pJn8/7123-00-0494.png', ''),
+  new PrimaConsumableParts('7123-00-0524', 'ASSY, HOLSTER KIT, VELOS', '', 'https://i.ibb.co/SJ0MqFY/7123-00-0524.png', ''),
+  new PrimaConsumableParts('8095-00-0470', 'GOGGLES, PATIENT', '', 'https://i.ibb.co/9Zdtdtj/8095-00-0470.png', 'goggles'),
+  new PrimaConsumableParts('8095-00-0489', 'Eye Wear,Laser', 'Operator Goggles', 'https://i.ibb.co/16QRSvp/8095-00-0489.png', 'goggles'),
+  new PrimaConsumableParts('MT70360', 'Ultrasound Gel, 1/4 liter bott', '', 'https://i.ibb.co/cyZsnvn/MT70360.png', ''),  
+  new PrimaConsumableParts('7123-00-0311', 'ASSY, PROTECTIVE WINDOW, RECEP', '', 'https://i.ibb.co/ts1s72F/7123-00-0311.png', ''),
+  new PrimaConsumableParts('8010-00-7492', 'Window, 15.75 mm dia, 1 mm thk', 'lens for PROTECTIVE WINDOW RECEP', '', ''),
+];
+
+const PrimaYagHead = [
+  new PrimaYagHeadParts('3406-10-0804', 'CONN,MALE 1/2T x1/4MPT SS', 'Yag Head', 'https://i.ibb.co/3yGy1vx/3406-10-0804.png', ''),
+  new PrimaYagHeadParts('3426-00-0002', 'SOCKET HEAD PIPE PLUG 1/8" NPT', 'Yag Head', 'https://i.ibb.co/cyz8T1t/3426-00-0002.png', ''),
+  new PrimaYagHeadParts('3406-89-0808', 'ADPTR,1/2ID BARB x 1/2TUBE END', '', 'https://i.ibb.co/qCvWk9S/3406-89-0808.png', ''),
+  new PrimaYagHeadParts('3406-89-0806', 'Adptr,1/2"ID Barb x3/8Tube End', '', 'https://i.ibb.co/SJ50q5S/3406-89-0806.png', ''),
+  new PrimaYagHeadParts('2902-00-0050', 'CLAMP,HOSE,WRM,SS,LINE7/16-3/4', '', 'https://i.ibb.co/718FKW0/2902-00-0050.png', ''),
+  new PrimaYagHeadParts('7123-00-0428', 'ASSY, VB3 YAG HEAD', '', 'https://i.ibb.co/5F8wkcH/7123-00-0428.png', ''),
+];
+
+const PrimaHandpiece = [
+  new PrimaHandpieceParts('7123-00-0433', 'ASSY, DELIVERY SYS, DCD HP, VE', 'Fiber with Handpiece Assy', 'https://i.ibb.co/2t3ktK6/7123-00-0433.png', 'F1.1, F8.3, F13.1, F13.3, F17'),
+  new PrimaHandpieceParts('7123-00-0431', 'ASSY, DELIVERY SYS, CC HP, VEL', 'Fiber with Handpiece Assy', 'https://i.ibb.co/2NVMqFZ/7123-00-0431.png', 'F13.1, F13.3')
+];
+
+const PrimaServicetool = [
+  new PrimaServicetoolsParts('7123-00-0400', 'Assy, Align Ver Tool, Velos', '', 'https://i.ibb.co/y42q2qd/7123-00-0400.png', 'fiber focus alignment tool')
+];
+
+
+const PrimaFluidsystem = [
+  // new PrimaFluidsystemParts('', '', '', '', ''),
+  new PrimaFluidsystemParts('7123-00-0481', 'ASSEMBLY, BYPASS FLOW SWITCH, VELOS', '', 'https://i.ibb.co/vPvSSXt/7123-00-0481.png', 'water leaking, F7.3'),
+  new PrimaFluidsystemParts('7123-00-0312', 'ASSY, CHILLER PUMP, VELOS', '', 'https://i.ibb.co/wdyCshb/7123-00-0312.png', 'F31.3'),
+  new PrimaFluidsystemParts('7123-00-0238', 'Assembly, Velos, Chiller', '', 'https://i.ibb.co/Zmk3YZ6/7123-00-0238.png', 'water leaking'),
+  new PrimaFluidsystemParts('7123-00-0274', 'Assembly, Velos, Chiller Section Tubing Kit', '', 'https://i.ibb.co/8M4FjMj/7123-00-0274.png', 'water leaking'),
+  new PrimaFluidsystemParts('7123-00-0552', 'ASSEMBLY, BYPASS FLOW SWITCH', '', 'https://i.ibb.co/3yY1CbL/7123-00-0552.png', 'water leaking, F7.3'),
+  new PrimaFluidsystemParts('7123-00-0273', 'Assembly, Velos, Fluid Section Tubing kit', '', 'https://i.ibb.co/5FHvGv9/7123-00-0273.png', 'water leaking'),
+  new PrimaFluidsystemParts('7123-00-0479', 'ASSEMBLY, DI FILTER, VELOS', '', 'https://i.ibb.co/n8LXNJW/7123-00-0479.png', 'water leaking'),
+  new PrimaFluidsystemParts('7123-00-0096', 'ASSY, Filter, DI/ Particle, 1/4IN OD Tube, JG', '', 'https://i.ibb.co/6ZGD4pm/7123-00-0096.png', 'water leaking'),
+  new PrimaFluidsystemParts('3412-14-0605', 'PLUG,QC,EL,DLRN/EPR,3/8BRB,VLV', '', 'https://i.ibb.co/S5cggDP/3412-14-0605.jpg', 'water leaking'),
+  new PrimaFluidsystemParts('7123-00-0460', 'ASSY, HEAT EXCHANGER W/FAN', '', 'https://i.ibb.co/dkQM1kM/7123-00-0460.png', 'water leaking'),
+  new PrimaFluidsystemParts('7123-00-0409', 'ASSY, SPOUT REMOTE FILLER', '', 'https://i.ibb.co/9w9f7Xq/7123-00-0409.png', 'water leaking'),
+  new PrimaFluidsystemParts('7123-00-0275', 'Assembly, Velos, Dye Tubing Kit', '', 'https://i.ibb.co/YNTB4yD/7123-00-0275.png', 'Dye leaking'),
+  new PrimaFluidsystemParts('7123-00-0199', 'Assy, Velos, DYE Pump', '', 'https://i.ibb.co/HhnXgV3/7123-00-0199.png', ''),
+  new PrimaFluidsystemParts('7123-00-0197', 'Assy, Velos, Reservoir', '', 'https://i.ibb.co/9Hmjg6X/7123-00-0197.png', ''),
+  new PrimaFluidsystemParts('7123-00-0196', 'Assy, Chiller Reservoir, Velos', '', 'https://i.ibb.co/VM1Jq31/7123-00-0196.png', ''),
+  new PrimaFluidsystemParts('7122-00-9262', 'DI LEVEL SWITCH ASSY SPECTRUM', '', 'https://i.ibb.co/bHfV6gc/7122-00-9262.png', 'F7.5'),
+  new PrimaFluidsystemParts('7122-00-3745', 'ASSY,WTR HTR TEMP PROBE,VBM2', 'Temperature sensor', 'https://i.ibb.co/bFwPSCT/7122-00-3745.jpg','F7.1, F7.2, F7.4'),
+  new PrimaFluidsystemParts('3414-00-0246', 'PUMP, 6.2 GPM 24VDC 3.2A CRD WITH NEW CASE ORIENTATION', '', 'https://i.ibb.co/zXC0sKJ/3414-00-0246.jpg', 'F7.3'),
+  new PrimaFluidsystemParts('3414-00-0190', 'BELLOWS PUMP,3/4\'\'MTR,24VDC/\nVBEAM2', '', 'https://i.ibb.co/gJnjYPy/3414-00-0190.jpg', 'F24.3'),
+  new PrimaFluidsystemParts('3455-00-0005', 'Ht Exchanger Liquid to Liquid', '', 'https://i.ibb.co/9VDDHTW/3455-00-0005.png', 'F9.1'),
+  new PrimaFluidsystemParts('7122-00-3660', 'AASSY,MANF DI,5/8 OD CRTG HTR', 'Water Heater','https://i.ibb.co/HnCPT7c/7122-00-3660.jpg','F9.1'),
+];
+
+
+
 
 // PicowayArmParts 객체 생성
 const picowayArmParts = [
@@ -526,7 +696,7 @@ app.get('/part/:info', (req, res) => {
   } else if (partType === 'vbeam') {
     parts = [...VbeamHead, ...vbeamConsumableParts, ...VbeamFluid, ...VbeamElectronic, ...VbeamMdye, ...VbeamOptics, ...VbeamServiceTool];
   } else if (partType === 'prima') {
-    parts = [...primaHeadParts, ...primaMDYEPart];
+    parts = [...PrimaDyeHead, ...PrimaMDYE, ...PrimaCalport, ...PrimaHeadrail, ...PrimaV14Upgrade, ...PrimaElectronic, ...PrimaCable, ...PrimaSkin, ...PrimaConsumable, ...PrimaYagHead, ...PrimaHandpiece, ...PrimaFluidsystem, ...PrimaServicetool];
   } else if (partType === 'picoway') {
     parts = [...picowayArmParts, ...picowayHandpieceParts, ...picowayElectronicsparts];
   } else if (partType === 'nordlys') {
@@ -552,8 +722,19 @@ app.get('/part/:info', (req, res) => {
       ...VbeamMdye,
       ...VbeamOptics,
       ...VbeamServiceTool,
-      ...primaHeadParts,
-      ...primaMDYEPart,
+      ...PrimaDyeHead,
+      ...PrimaMDYE,
+      ...PrimaCalport,
+      ...PrimaHeadrail, 
+      ...PrimaV14Upgrade,
+      ...PrimaElectronic,
+      ...PrimaCable,
+      ...PrimaSkin,
+      ...PrimaConsumable,
+      ...PrimaYagHead,
+      ...PrimaHandpiece,
+      ...PrimaFluidsystem,
+      ...PrimaServicetool,
       ...picowayArmParts,
       ...picowayHandpieceParts,
       ...picowayElectronicsparts,
