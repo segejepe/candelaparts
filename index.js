@@ -74,6 +74,8 @@ class NordlysConsumableParts extends Part { }
 class NordlysElectronicParts extends Part { }
 class NordlysfluidParts extends Part { }
 
+//Matrix Pro
+class ProfoundMetrixProParts extends Part { }
 
 // ******************************* 객체 생성 *********************************
 // GmpOpticsparts 객체 생성
@@ -400,6 +402,7 @@ const VbeamElectronic = [
   new VbeamElectronicsParts('7122-00-7533', 'ASSY,HARNESS,HV', '', '', 'cable'),
   new VbeamElectronicsParts('7111-07-2510', 'ASSY, PCB, HP BULKHEAD ROHS', '', 'https://i.ibb.co/fXk6Txh/7111-07-2510.jpg', 'F10.1, F10.3, F10.2'),
   new VbeamElectronicsParts('5609-00-0200', 'XFMR,STPDN,115/230P,28V,250VA', '', 'https://i.ibb.co/p3d5GKw/5609-00-0200.jpg', ''),
+  new VbeamElectronicsParts('1510-00-0110', 'CAP,PFN,1500uF,3.2KV', 'Capacitor', '', ''),
 ];
 
 //VbeamMdyeParts 객체 생성
@@ -424,7 +427,7 @@ const VbeamMdye = [
 ];
 
 const VbeamServiceTool = [
-  new VbeamServiceToolParts('7122-00-3779', 'VBEAM2 VERIFICATION TOOL', '', '', ''),
+  new VbeamServiceToolParts('7122-00-3779', 'VBEAM2 VERIFICATION TOOL', 'Fiber alignment tool', 'https://i.ibb.co/ZmcchrT/7122-00-3779.png', ''),
   new VbeamServiceToolParts('7122-00-3363', 'ASSY,TOOL,ALIGN,CROSSHAIR,MGL', '', 'https://i.ibb.co/nn0snD3/7122-00-3363.jpg', ''),
   new VbeamServiceToolParts('7122-00-3840', 'ASSY, HOYA V-10, WL MEASURE', 'Wavelength cal tool', 'https://i.ibb.co/3kgkbLr/7122-00-3840.jpg', ''),
   new VbeamServiceToolParts('1301-00-5923', 'WRENCH,MIRROR', '', 'https://i.ibb.co/fDvNWx5/1301-00-5923.jpg', ''),
@@ -622,6 +625,8 @@ const picowayArmParts = [
   new PicowayArmParts('MP97161', 'Foam Mirror support, Arm, Candela Thick, 6mm diameter Recess', 'Foam(Old Arm mirror mount, Black)', 'https://i.ibb.co/XzfDHtf/MP97161.png', ''),
   new PicowayArmParts('2820-00-0600', 'WASHER,LOCK,INT TH #6 ID', 'Metal Spring Washer Old Style (Large Arm mirrors)', '', ''),
   new PicowayArmParts('1303-00-0159', 'BRACKET, ROTATION STOP, ARM, PICOWAY', '', 'https://i.ibb.co/cTb24qX/1303-00-0159.png', ''),
+  new PicowayArmParts('FIN101024', 'Articulated Arm Service Kit, PicoWay', 'OXID Arm Upgrade', '', ''),
+  new PicowayArmParts('7123-00-0678', 'OXID Arm, PicoWay, Inspected', 'OXID Arm Upgrade', 'https://i.ibb.co/cJ2NLq4/7123-00-0678.png', 'Low energy')
 ];
 
 // PicowayHandpiecePart 객체 생성
@@ -840,6 +845,75 @@ const Nordlysfluid = [
   new NordlysfluidParts('S2FIT7536', 'Water connector for output panel (connector only)', '', '', ''),
 ];
 
+//Matrix Pro Parts 객체 생성
+const profoundmatrixprop = [
+  // new MetrixProParts('','','','',''),
+  new ProfoundMetrixProParts('FG71851', 'Applicator Assy, Matrix Pro', '', '', ''),
+  new ProfoundMetrixProParts('AS79444', 'PCBA, RF Module, eTwo', '', '', ''),
+  new ProfoundMetrixProParts('AS09614', 'SBC, Pico-ITX, INTEL CPU. Profound Matrix', '', '', ''),
+  new ProfoundMetrixProParts('AS95121', 'PCBA, Splitter Base, eTwo', '', '', ''),
+  new ProfoundMetrixProParts('AS78481', 'PCBA, Splitter Distributor, eTwo', '', '', ''),
+  new ProfoundMetrixProParts('AS9571A', 'RF Module Assymbly', '', '', ''),
+  new ProfoundMetrixProParts('AS9573A', 'Computer Module Assembly', '', '', ''),
+  new ProfoundMetrixProParts('AS9576A', 'Lower Tray Assembly', '', '', ''),
+  new ProfoundMetrixProParts('AS9580A', 'Power Supply Assembly', '', '', ''),
+  new ProfoundMetrixProParts('AS9596A', 'Loud Speaker with Harness, Matrix Pro', '', '', ''),
+  new ProfoundMetrixProParts('HR07868', 'Harness,CPU TO LCD (LVDS), Profound Matrix', '', '', ''),
+  new ProfoundMetrixProParts('HR07869', 'Harness,IO to Display, Profound Matrix', '', '', ''),
+  new ProfoundMetrixProParts('HR7845A', 'Harness, CPU I/O Board Audio, Matrix Pro', '', '', ''),
+  new ProfoundMetrixProParts('HR7846A', 'Harness, CPU to I/O, Matrix Pro', '', '', ''),
+  new ProfoundMetrixProParts('HR7849A', 'Harness, Splitter to Applicator, Matrix Pro', '', '', ''),
+  new ProfoundMetrixProParts('HR78551', 'SubRF/Matrix Pro Appl. Connector Harness, Console, Matrix Pro', '', '', ''),
+  new ProfoundMetrixProParts('AS86571', 'PCBA, PWM Driver to Display, eTwo / eMatrix / eSpa', '', '', ''),
+  new ProfoundMetrixProParts('HR73251', 'Harness, P.S. 12V, eTwo', '', '', ''),
+  new ProfoundMetrixProParts('HR73493', 'Harness I/O to Display, eTwo', '', '', ''),
+  new ProfoundMetrixProParts('HR07868', 'CPU TO LCD (LVDS) , Adeline Star', '', '', ''),
+  new ProfoundMetrixProParts('PC73971', 'PCB, Air Switch, matrix Pro', '', '', ''),
+  new ProfoundMetrixProParts('AS9592A', 'Applicator Support Assy', '', '', ''),
+  new ProfoundMetrixProParts('AS9597A', 'Fan with Connector. Assy, Matrix Pro', '', '', ''),
+  new ProfoundMetrixProParts('SBA100248', 'Controller card, touch screen', '', '', ''),
+  new ProfoundMetrixProParts('HR07870', 'Harness, Power Supply 12V, Matrix Pro', '', '', ''),
+  new ProfoundMetrixProParts('HR7848A', 'PWR Switch Harness, Matrix Pro', '', '', ''),
+  new ProfoundMetrixProParts('HR7856', 'Harness, IO to RF Control, Console', '', '', ''),
+  new ProfoundMetrixProParts('HR7857', 'Harness, Power Supply to IO, Console', '', '', ''),
+  new ProfoundMetrixProParts('HR7858', 'Harness, Splitter to PI filter, Console', '', '', ''),
+  new ProfoundMetrixProParts('HR7859', 'Harness, RF to Splitter, Console', '', '', ''),
+  new ProfoundMetrixProParts('HR7860', 'Harness, IO-J1 to Splitter-J8, Console', '', '', ''),
+  new ProfoundMetrixProParts('MC0895A', 'Air filter', '', '', ''),
+  new ProfoundMetrixProParts('MC09761', 'PS, LOWER CABLE CLAMP', '', '', ''),
+  new ProfoundMetrixProParts('AS72402', 'PCBA, PWR Switch, eMatrix', '', '', ''),
+  new ProfoundMetrixProParts('SBA100246', 'Touch Screen Adhered to LCD Sub-Assy, eMatrix', '', '', ''),
+  new ProfoundMetrixProParts('AS9590A', 'Display Bezel Assembly', '', '', ''),
+  new ProfoundMetrixProParts('HR72500', 'Harness, LED back light cable, L=200mm', '', '', ''),
+  new ProfoundMetrixProParts('HR73211', 'Harness,1wire Sig.forST Appl.-I/O to Splitter,e2', '', '', ''),
+  new ProfoundMetrixProParts('HR73971', '38V RF Card Power Harness, eTwo', '', '', ''),
+  new ProfoundMetrixProParts('1303-00-1480', 'CLAMP, APPLICATOR HOLSTER', '', '', ''),
+  new ProfoundMetrixProParts('FG71851', 'Applicator Assy, Matrix Pro', '', '', ''),
+  new ProfoundMetrixProParts('AS9575A', 'Upper Tray Assembly', '', '', ''),
+  new ProfoundMetrixProParts('AS9578A', 'Front Panel Assembly', '', '', ''),
+  new ProfoundMetrixProParts('AS9579A', 'Rear Panel Assembly', '', '', ''),
+  new ProfoundMetrixProParts('AS9581A', 'AC Inlet Assembly', '', '', ''),
+  new ProfoundMetrixProParts('AS9582A', 'USB & Speaker Assembly', '', '', ''),
+  new ProfoundMetrixProParts('HR07871', 'Harness,GND to Display, Profound Matrix', '', '', ''),
+  new ProfoundMetrixProParts('HR77830', 'Cable, USB A panel mount female to USB A male L=12in.', '', '', ''),
+  new ProfoundMetrixProParts('MC0881A', 'Left Handle Bracket', '', '', ''),
+  new ProfoundMetrixProParts('MC0882A', 'Right Handle Bracket', '', '', ''),
+  new ProfoundMetrixProParts('MC0888A', 'Left Handle Extender', '', '', ''),
+  new ProfoundMetrixProParts('MC0889A', 'Right Handle Extender', '', '', ''),
+  new ProfoundMetrixProParts('MC0890A', 'Handle Rod', '', '', ''),
+  new ProfoundMetrixProParts('MC0920A', 'Bracket, DISPLAY BEZEL', '', '', ''),
+  new ProfoundMetrixProParts('2610-00-0073', 'FAN GUARD METAL, 120MM', '', '', ''),
+  new ProfoundMetrixProParts('AN00050', 'Antenna, WiFi, 2.4GHz and 5GHz dipole', '', '', ''),
+  new ProfoundMetrixProParts('AS79541', 'Fan with Conn. Assy, RF Cage, eTwo', '', '', ''),
+  new ProfoundMetrixProParts('AS95091', 'PCBAs Assy Splitter & Distributer, eTwo', '', '', ''),
+  new ProfoundMetrixProParts('AS95071', 'PCBA, I/O, eTwo', '', '', ''),
+  new ProfoundMetrixProParts('AS9586A', 'Assembly, Display Back Cover', '', '', ''),
+  new ProfoundMetrixProParts('HR71271', 'GND Wire, RF Cage, eMatrix', '', '', ''),
+  new ProfoundMetrixProParts('MC0987A', 'FootSwitch, air, 2m tube (black), 3mm I/D & 6mm O/D.', '', '', ''),
+  new ProfoundMetrixProParts('TL70791', 'Tool, Appl. Conn. Nut Fastener', '', '', ''),
+];
+
+
 app.get('/part/:info', (req, res) => {
   const info = req.params.info.toLowerCase(); // Convert the search term to lowercase
   const partType = req.query.partType; // Get the selected part type from the query parameter
@@ -859,6 +933,9 @@ app.get('/part/:info', (req, res) => {
     parts = [...picowayArmParts, ...picowayHandpieceParts, ...picowayElectronicsparts, ...PicowaySkin, ...PicowayConsumable, ...PicowayUpperRail, ...PicowayLowerLevel, ...PicowayHarness, ...PicowayFuidSystem];
   } else if (partType === 'nordlys') {
     parts = [...NordlysConsumable, ...NordlysElectronic, ...Nordlysfluid];
+
+  } else if (partType === 'profoundmatrixpro') {
+    parts = [...profoundmatrixprop];
 
   } else {
     parts = [
@@ -906,6 +983,7 @@ app.get('/part/:info', (req, res) => {
       ...NordlysConsumable,
       ...NordlysElectronic,
       ...Nordlysfluid,
+      ...profoundmatrixprop,
     ];
   }
 
