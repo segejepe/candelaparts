@@ -38,7 +38,7 @@ class VbeamHeadParts extends Part { } // Add VbeamHeadParts class
 class VbeamConsumableParts extends Part { } // Add VbeamConsumableParts class
 class VbeamFluidParts extends Part { }
 class VbeamElectronicsParts extends Part { }
-class VbeamMdyeParts extends Part{ }
+class VbeamMdyeParts extends Part { }
 class VbeamOpticsParts extends Part { }
 class VbeamServiceToolParts extends Part { }
 
@@ -70,12 +70,20 @@ class PicowayFuidSystemParts extends Part { }
 
 
 //Nordlys
+class NordlysApplicatorParts extends Part { }
 class NordlysConsumableParts extends Part { }
 class NordlysElectronicParts extends Part { }
 class NordlysfluidParts extends Part { }
+class NordlysCableParts extends Part { }
+class NordlysSkinParts extends Part { }
 
 //Matrix Pro
-class ProfoundMetrixProParts extends Part { }
+class ProfoundMetrixProElectronicParts extends Part { }
+class ProfoundMetrixProApplicatorParts extends Part { }
+class ProfoundMetrixProConsumableParts extends Part { }
+class ProfoundMetrixProCableParts extends Part { }
+class ProfoundMetrixProSkinParts extends Part { }
+class ProfoundMetrixProServicetoolsParts extends Part { }
 
 // ******************************* 객체 생성 *********************************
 // GmpOpticsparts 객체 생성
@@ -90,7 +98,7 @@ const opticsParts = [
   new GmpOpticsparts('7122-00-9458', 'BEAM SPLITTER, ASSY', '', '', 'https://i.ibb.co/Rph94GG/7122-00-9458.jpg'),
   new GmpOpticsparts('8055-00-0309', 'SPECTRUM HEAD DETECTOR BEAMSPLITTER', 'BEAM SPLITTER Lens only', '', ''),
   new GmpOpticsparts('7122-00-9575', 'DHP FIBER RECEPTACLE', '', 'https://i.ibb.co/58kTRpT/7122-00-9575.jpg', 'F15.1'),
-  new GmpOpticsparts('8050-00-9003', 'Fiber foucs lens', 'Fiber foucs lens only', '', ''),
+  new GmpOpticsparts('8050-00-9003', 'Fiber foucs lens', 'Fiber foucs lens only, Need 2ea', '', ''),
   new GmpOpticsparts('7122-00-9457', 'ASSY,HEAD DETECTOR, GMAX PRO', '', 'https://i.ibb.co/tBSSG5C/7122-00-9457.jpg', ''),
   new GmpOpticsparts('7122-00-9529', 'BEAM BLOCKER ASSY GMAX PRO', 'Shutter(GMAX PRO)', '', 'F3.1'),
   new GmpOpticsparts('7122-00-9410', 'BEAM BLOCKER ASSY', 'For Old system only', '', 'F3.1'),
@@ -205,7 +213,7 @@ const fluidSystem = [
   new GmpFluidsystem('3455-00-0154', 'PRO SERIES 2 ROW HT EXCHNGR', '', '', ''),
   new GmpFluidsystem('8120-00-0001', 'PRO FLUID MODULE, NO HEATER', '', 'https://i.ibb.co/qYPzRXp/8120-00-0001.jpg', 'Water leaking'),
   new GmpFluidsystem('5108-06-0175', 'THERMO,NC,OPEN@175F,CLOSE@145F', 'F7.2', 'https://i.ibb.co/gj2fvPz/5108-06-0175.jpg', ''),
-  new GmpFluidsystem('3414-00-0248 ', 'Pump, 5.3 GPM, 24VDC, 45W, Mod', '','https://i.ibb.co/MR0WT8r/3414-00-0248.jpg', ''),
+  new GmpFluidsystem('3414-00-0248 ', 'Pump, 5.3 GPM, 24VDC, 45W, Mod', '', 'https://i.ibb.co/MR0WT8r/3414-00-0248.jpg', ''),
 ];
 
 // GmpHeadparts 객체 생성
@@ -251,7 +259,7 @@ const gmphd = [
 ];
 
 // Gmpcontrollerparts 객체 생성
-const gmpController =[
+const gmpController = [
   new GmpControllerparts('7123-07-0014', 'Split IO', '', 'https://i.ibb.co/XZHsLD0/7123-07-0014.jpg', 'F26.1,Upgrade to Split IO, F7.1, F7.2, F18.1, F18.2, F18.3, F8.4, F9.2'),
   new GmpControllerparts('7123-67-0014', 'Split IO', 'FSE Part', 'https://i.ibb.co/XZHsLD0/7123-07-0014.jpg', 'F26.1, F7.1, F7.2, F18.1, F18.2, F18.3, F8.4'),
   new GmpControllerparts('7123-00-0588', 'ASSY, Q7 LCD DISPLAY', 'New Display for 5digts', 'https://i.ibb.co/PZzs2P8/7123-00-0588.jpg', 'F26.1,Upgrade to Split IO, F24'),
@@ -267,7 +275,7 @@ const gmpskin = [
   new GmpSkinParts('7122-00-9441', 'DISPLAY BEZEL ASSY,GENTLE LASE PRO', '', 'https://i.ibb.co/k25B44W/7122-00-9441.jpg', 'cover'),
   new GmpSkinParts('7122-00-9460', 'DISPLAY BEZEL,REAR ASSY, GL PRO', '', 'https://i.ibb.co/zmDcCxq/7122-00-9460.jpg', 'cover'),
   new GmpSkinParts('2846-30-0808', 'SCR,SEMS,EXT TH,PHLPS,8-32x1/2', '', 'https://i.ibb.co/YRkkRXW/2846-30-0808.jpg', 'Screw'),
-  new GmpSkinParts('2846-30-0806', 'SCR,SEMS,EXT,PAN,PHLPS,8-32x3/8,SS', '', 'https://i.ibb.co/pn9pVm8/2846-30-0806.jpg','Screw'),
+  new GmpSkinParts('2846-30-0806', 'SCR,SEMS,EXT,PAN,PHLPS,8-32x3/8,SS', '', 'https://i.ibb.co/pn9pVm8/2846-30-0806.jpg', 'Screw'),
   new GmpSkinParts('2846-31-1006', 'SCR,SEMS,EXTH,PHILPS,10-32X3/8', '', 'https://i.ibb.co/fGMSpcG/2846-31-1006.jpg', 'Screw'),
   new GmpSkinParts('2846-30-0806', 'SCR,SEMS,EXT,PAN,PHLPS,8-32x3/8,SS', '', 'https://i.ibb.co/sqDFcZd/2846-30-0806-1.jpg', 'Screw'),
   new GmpSkinParts('1301-00-9409', 'DCD COVER, SPECTRUM', '', 'https://i.ibb.co/r76ygCx/1301-00-9409.jpg', '')
@@ -371,8 +379,8 @@ const VbeamFluid = [
   new VbeamFluidParts('3412-14-0605', 'PLUG,QC,EL,DLRN/EPR,3/8BRB,VLV', '', 'https://i.ibb.co/S5cggDP/3412-14-0605.jpg', 'L shape Plug, Water leak, Dye leak'),
   new VbeamFluidParts('3412-25-0120', 'PLUG,QC,DLRN,TWIN,1/8 BARB,EPR', '', 'https://i.ibb.co/K5H5SVX/3412-25-0120.jpg', 'Dye Leak'),
   new VbeamFluidParts('7122-00-3723', 'ASSY TFLN TBG HTR MANF LIQ HE', '', 'https://i.ibb.co/8zn333v/7122-00-3723.jpg', 'Drain water'),
-  new VbeamFluidParts('7122-00-3725', 'ASSY,PUMP PRESS SW', 'DI water Pump press', 'https://i.ibb.co/xsFgtXw/7122-00-3725.jpg','Pressure, F7.3'),
-  new VbeamFluidParts('7122-00-3745', 'ASSY,WTR HTR TEMP PROBE,VBM2', 'Temperature sensor', 'https://i.ibb.co/bFwPSCT/7122-00-3745.jpg','F9.1'),
+  new VbeamFluidParts('7122-00-3725', 'ASSY,PUMP PRESS SW', 'DI water Pump press', 'https://i.ibb.co/xsFgtXw/7122-00-3725.jpg', 'Pressure, F7.3'),
+  new VbeamFluidParts('7122-00-3745', 'ASSY,WTR HTR TEMP PROBE,VBM2', 'Temperature sensor', 'https://i.ibb.co/bFwPSCT/7122-00-3745.jpg', 'F9.1'),
   new VbeamFluidParts('3460-00-0071', 'CAP VENT 2 1/4 BUTTRESS THRD', 'cap', 'https://i.ibb.co/rs4d6Nv/3460-00-0071.jpg', ''),
 ];
 
@@ -382,20 +390,20 @@ const VbeamElectronic = [
   new VbeamElectronicsParts('7122-00-0110', 'Assy Pump,Dye,Vbeam', '', '', 'F20.1'),
   new VbeamElectronicsParts('7111-07-2696', 'ASSY, AC BOARD,VBEAM 2 ROHS', '', 'https://i.ibb.co/2sf4yXp/7111-07-2696.jpg', 'Power off, F20.1'),
   new VbeamElectronicsParts('7111-00-2696', 'ASSY, AC BOARD,VBEAM 2 ROHS', '', 'https://i.ibb.co/2sf4yXp/7111-07-2696.jpg', 'Power off, F20.1'),
-  new VbeamElectronicsParts('7122-07-7498', 'ASSY, CPU/LSR I/O W/FW, VBEAM2','', 'https://i.ibb.co/HnzQb4p/7122-07-7498.jpg', 'F18 io'),
-  new VbeamElectronicsParts('7122-00-7498', 'ASSY, CPU/LSR I/O W/FW, VBEAM2','', 'https://i.ibb.co/HnzQb4p/7122-07-7498.jpg', 'F18 io'),
-  new VbeamElectronicsParts('7122-57-7498', 'ASSY, CPU/LSR I/O W/FW, VBEAM2','', 'https://i.ibb.co/HnzQb4p/7122-07-7498.jpg', 'F18 io'),
+  new VbeamElectronicsParts('7122-07-7498', 'ASSY, CPU/LSR I/O W/FW, VBEAM2', '', 'https://i.ibb.co/HnzQb4p/7122-07-7498.jpg', 'F18 io'),
+  new VbeamElectronicsParts('7122-00-7498', 'ASSY, CPU/LSR I/O W/FW, VBEAM2', '', 'https://i.ibb.co/HnzQb4p/7122-07-7498.jpg', 'F18 io'),
+  new VbeamElectronicsParts('7122-57-7498', 'ASSY, CPU/LSR I/O W/FW, VBEAM2', '', 'https://i.ibb.co/HnzQb4p/7122-07-7498.jpg', 'F18 io'),
   new VbeamElectronicsParts('7122-00-3803', 'ASSY,THYR,VBEAM2', 'THYRISTOR', 'https://i.ibb.co/P4q3jjS/7122-00-3803.jpg', 'F5.2'),
-  new VbeamElectronicsParts('8901-00-9421', 'VB2 THYRISTOR REPAIR KIT', 'THYRISTOR','','F5.2'),
-  new VbeamElectronicsParts('7122-00-3674', 'ASSY,IGBT', '','https://i.ibb.co/QdqZmWt/7122-00-3674.jpg','F19.1'),
+  new VbeamElectronicsParts('8901-00-9421', 'VB2 THYRISTOR REPAIR KIT', 'THYRISTOR', '', 'F5.2'),
+  new VbeamElectronicsParts('7122-00-3674', 'ASSY,IGBT', '', 'https://i.ibb.co/QdqZmWt/7122-00-3674.jpg', 'F19.1'),
   new VbeamElectronicsParts('7122-07-3674', 'ASSY,VBEAM2, IGBT ROHS', '', 'https://i.ibb.co/QdqZmWt/7122-00-3674.jpg', 'F19.1'),
-  new VbeamElectronicsParts('7122-00-3660', 'AASSY,MANF DI,5/8 OD CRTG HTR', 'Water Heater','https://i.ibb.co/HnCPT7c/7122-00-3660.jpg','F9.1, F7.1, F7.4'),
+  new VbeamElectronicsParts('7122-00-3660', 'AASSY,MANF DI,5/8 OD CRTG HTR', 'Water Heater', 'https://i.ibb.co/HnCPT7c/7122-00-3660.jpg', 'F9.1, F7.1, F7.4'),
   new VbeamElectronicsParts('4816-01-2200', 'Diode,HV,2200V,120A,DUAL MOD', 'Set HV to zero… go into ready. Does the HVSample go up to 2875??  If so.. bad diode', 'https://i.ibb.co/hcK81DZ/4816-01-2200.jpg', 'F5.2'),
   new VbeamElectronicsParts('7111-07-2813', 'ASSY, VB2 HV DUMP 0.7 OHM PCB ROHS', '', '', 'F19.5'),
-  new VbeamElectronicsParts('4001-01-0086', 'HVPS, 3.3KV, 3KJ/S, TRIG, SIM', '', '','F4.2, F5.1, F5.2, F14'),
-  new VbeamElectronicsParts('7122-00-3640', 'ASSY, DCD', '', 'https://i.ibb.co/Tr61032/7122-00-3640.jpg','F8.1'),
+  new VbeamElectronicsParts('4001-01-0086', 'HVPS, 3.3KV, 3KJ/S, TRIG, SIM', '', '', 'F4.2, F5.1, F5.2, F14'),
+  new VbeamElectronicsParts('7122-00-3640', 'ASSY, DCD', '', 'https://i.ibb.co/Tr61032/7122-00-3640.jpg', 'F8.1'),
   new VbeamElectronicsParts('7122-00-3006', 'Assy,DCD Valve,Diode', '', 'https://i.ibb.co/5RDy24X/7122-00-3006.jpg', ''),
-  new VbeamElectronicsParts('3414-00-0248 ', 'Pump, 5.3 GPM, 24VDC, 45W, Mod', '','https://i.ibb.co/MR0WT8r/3414-00-0248.jpg', ''),
+  new VbeamElectronicsParts('3414-00-0248 ', 'Pump, 5.3 GPM, 24VDC, 45W, Mod', '', 'https://i.ibb.co/MR0WT8r/3414-00-0248.jpg', ''),
   new VbeamElectronicsParts('7122-00-9712', 'VBM2 ETX ASSY W/FW', 'LCD Display, SD5', 'https://i.ibb.co/x6G8t4q/7122-00-9712.jpg', 'Black screen'),
   new VbeamElectronicsParts('7111-07-2701', 'ASSY,BOM,DYE CRTG ID BD,VB2 RoHS', '', 'https://i.ibb.co/DWrWrmX/7111-07-2701.png', ''),
   new VbeamElectronicsParts('7122-00-7526', 'ASSY,HARN,SIG,VBEAM2', '', '', 'cable'),
@@ -559,7 +567,7 @@ const PrimaConsumable = [
   new PrimaConsumableParts('7123-00-0524', 'ASSY, HOLSTER KIT, VELOS', '', 'https://i.ibb.co/SJ0MqFY/7123-00-0524.png', ''),
   new PrimaConsumableParts('8095-00-0470', 'GOGGLES, PATIENT', '', 'https://i.ibb.co/9Zdtdtj/8095-00-0470.png', 'goggles'),
   new PrimaConsumableParts('8095-00-0489', 'Eye Wear,Laser', 'Operator Goggles', 'https://i.ibb.co/16QRSvp/8095-00-0489.png', 'goggles'),
-  new PrimaConsumableParts('MT70360', 'Ultrasound Gel, 1/4 liter bott', '', 'https://i.ibb.co/cyZsnvn/MT70360.png', ''),  
+  new PrimaConsumableParts('MT70360', 'Ultrasound Gel, 1/4 liter bott', '', 'https://i.ibb.co/cyZsnvn/MT70360.png', ''),
   new PrimaConsumableParts('7123-00-0311', 'ASSY, PROTECTIVE WINDOW, RECEP', '', 'https://i.ibb.co/ts1s72F/7123-00-0311.png', ''),
   new PrimaConsumableParts('8010-00-7492', 'Window, 15.75 mm dia, 1 mm thk', 'lens for PROTECTIVE WINDOW RECEP', '', ''),
 ];
@@ -602,11 +610,11 @@ const PrimaFluidsystem = [
   new PrimaFluidsystemParts('7123-00-0197', 'Assy, Velos, Reservoir', '', 'https://i.ibb.co/9Hmjg6X/7123-00-0197.png', ''),
   new PrimaFluidsystemParts('7123-00-0196', 'Assy, Chiller Reservoir, Velos', '', 'https://i.ibb.co/VM1Jq31/7123-00-0196.png', ''),
   new PrimaFluidsystemParts('7122-00-9262', 'DI LEVEL SWITCH ASSY SPECTRUM', '', 'https://i.ibb.co/bHfV6gc/7122-00-9262.png', 'F7.5'),
-  new PrimaFluidsystemParts('7122-00-3745', 'ASSY,WTR HTR TEMP PROBE,VBM2', 'Temperature sensor', 'https://i.ibb.co/bFwPSCT/7122-00-3745.jpg','F7.1, F7.2, F7.4'),
+  new PrimaFluidsystemParts('7122-00-3745', 'ASSY,WTR HTR TEMP PROBE,VBM2', 'Temperature sensor', 'https://i.ibb.co/bFwPSCT/7122-00-3745.jpg', 'F7.1, F7.2, F7.4'),
   new PrimaFluidsystemParts('3414-00-0246', 'PUMP, 6.2 GPM 24VDC 3.2A CRD WITH NEW CASE ORIENTATION', '', 'https://i.ibb.co/zXC0sKJ/3414-00-0246.jpg', 'F7.3'),
   new PrimaFluidsystemParts('3414-00-0190', 'BELLOWS PUMP,3/4\'\'MTR,24VDC/\nVBEAM2', '', 'https://i.ibb.co/gJnjYPy/3414-00-0190.jpg', 'F24.3, DYE'),
   new PrimaFluidsystemParts('3455-00-0005', 'Ht Exchanger Liquid to Liquid', '', 'https://i.ibb.co/9VDDHTW/3455-00-0005.png', 'F9.1'),
-  new PrimaFluidsystemParts('7122-00-3660', 'AASSY,MANF DI,5/8 OD CRTG HTR', 'Water Heater','https://i.ibb.co/HnCPT7c/7122-00-3660.jpg','F9.1'),
+  new PrimaFluidsystemParts('7122-00-3660', 'AASSY,MANF DI,5/8 OD CRTG HTR', 'Water Heater', 'https://i.ibb.co/HnCPT7c/7122-00-3660.jpg', 'F9.1'),
 ];
 
 
@@ -678,134 +686,145 @@ const picowayElectronicsparts = [
 
 
 const PicowaySkin = [
-new PicowaySkinParts('1303-00-0143', 'COVER, TOP SKIN, PICOWAY', '', 'https://i.ibb.co/j88RqH6/1303-00-0143.png', ''),
-new PicowaySkinParts('1303-00-0144', 'CLAMP, LAUNCH SPACER, SKIN, PICOWAY', 'Arm post skin', '', ''),
-new PicowaySkinParts('7122-00-9844', 'ASSY, RIGHT PANEL, PICOWAY', '', 'https://i.ibb.co/7RrGv5F/7122-00-9844.png', ''),
-new PicowaySkinParts('7122-00-9848', 'ASSEMBLY, PANEL, LEFT, PICOWAY', '', 'https://i.ibb.co/HzSPJLY/7122-00-9848.png', ''),
-new PicowaySkinParts('7122-00-9847', 'ASSEMBLY, PANEL, FRONT LOWER, PICOWAY', '', 'https://i.ibb.co/HH5czmW/7122-00-9847.png', ''),
+  new PicowaySkinParts('1303-00-0143', 'COVER, TOP SKIN, PICOWAY', '', 'https://i.ibb.co/j88RqH6/1303-00-0143.png', ''),
+  new PicowaySkinParts('1303-00-0144', 'CLAMP, LAUNCH SPACER, SKIN, PICOWAY', 'Arm post skin', '', ''),
+  new PicowaySkinParts('7122-00-9844', 'ASSY, RIGHT PANEL, PICOWAY', '', 'https://i.ibb.co/7RrGv5F/7122-00-9844.png', ''),
+  new PicowaySkinParts('7122-00-9848', 'ASSEMBLY, PANEL, LEFT, PICOWAY', '', 'https://i.ibb.co/HzSPJLY/7122-00-9848.png', ''),
+  new PicowaySkinParts('7122-00-9847', 'ASSEMBLY, PANEL, FRONT LOWER, PICOWAY', '', 'https://i.ibb.co/HH5czmW/7122-00-9847.png', ''),
 ];
 
 
 const PicowayConsumable = [
-new PicowayConsumableParts('8095-00-0488', '1064/532 Operator Goggles', '1064/532/730/785', 'https://i.ibb.co/Pz2tWPC/8095-00-0488.png', ''),
-new PicowayConsumableParts('8095-00-0470', 'Patient Goggles', '', '', ''),
-new PicowayConsumableParts('5103-00-0030', 'FOOTSWITCH', '', '', ''),
-new PicowayConsumableParts('8901-00-9950', 'PM KIT, PICO', '', '', 'PM'),
-new PicowayConsumableParts('1630-00-0101', 'Burn paper', '', '', ''),
-new PicowayConsumableParts('1303-00-0203', 'COVER, ARM SPACER, PICOWAY', '', 'https://i.ibb.co/s3hpQF0/1303-00-0203.png', 'End of Arm'),
+  new PicowayConsumableParts('8095-00-0488', '1064/532 Operator Goggles', '1064/532/730/785', 'https://i.ibb.co/Pz2tWPC/8095-00-0488.png', ''),
+  new PicowayConsumableParts('8095-00-0470', 'Patient Goggles', '', '', ''),
+  new PicowayConsumableParts('5103-00-0030', 'FOOTSWITCH', '', '', ''),
+  new PicowayConsumableParts('8901-00-9950', 'PM KIT, PICO', '', '', 'PM'),
+  new PicowayConsumableParts('1630-00-0101', 'Burn paper', '', '', ''),
+  new PicowayConsumableParts('1303-00-0203', 'COVER, ARM SPACER, PICOWAY', '', 'https://i.ibb.co/s3hpQF0/1303-00-0203.png', 'End of Arm'),
 ];
 
 
-const PicowayUpperRail =[
-new PicowayUpperRailParts('7122-00-9833', 'ASSY, MOUNTED SEED, PICOWAY', '', 'https://i.ibb.co/YdMyyTC/7122-00-9833.png', ''),
-new PicowayUpperRailParts('7122-57-9833', 'FSE, MOUNTED SEED, PICO', '', '', ''),
-new PicowayUpperRailParts('8015-00-1247', 'MIRROR PP 1064/650/532nm 1 DIA X .25 45 DEGREE', 'launch 8E', '', 'Low energy, Alignment'),
-new PicowayUpperRailParts('7123-00-0227', 'Assy,Beam Combiner,Gimbal', 'item #14', '', ''),
-new PicowayUpperRailParts('8055-00-0314', 'BEAM COMBINER R1064 T532 PICO', 'Only Lens inside item #14', '', ''),
-new PicowayUpperRailParts('7122-00-9888', 'ASSY,COOL CHAMB,12 X 71MM,11 D', '1064 AMP Chamber', 'https://i.ibb.co/gVTCttw/7122-00-9888.png', ''),
-new PicowayUpperRailParts('8085-18-0430', 'Faraday Isolator, 8 mm dia.', 'FR', 'https://i.ibb.co/Dkq8xm2/8085-18-0430.png', ''),
-new PicowayUpperRailParts('7123-00-0036', 'ASSY, SINGLE1064 COLL LENS, 120 MM FL', 'Item #13', 'https://i.ibb.co/y8bkNVf/7123-00-0036.png', ''),
-new PicowayUpperRailParts('8050-00-9026', 'LENS, PL/CX, 25.4mmDIA, 120mmF', 'Only Lens inside Item #13, 7123-00-0036', '', ''),
-new PicowayUpperRailParts('7123-00-0077', 'ASSY MIRROR GIMBAL MOUNT PIC', 'Item #8', '', 'Alignment'),
-new PicowayUpperRailParts('7123-00-0225', 'Assy,Dual Band,Gimbal', 'Item #3', '', 'Alignment'),
-new PicowayUpperRailParts('8055-00-0316', 'BEAM COMBINER R1064/532 T650 P', 'Only Lens inside Item #3', '', ''),
-new PicowayUpperRailParts('7123-00-0226', 'Assy,Aiming Beam Mirror,Gimbal', 'Item #21', '', ''),
-new PicowayUpperRailParts('8015-00-1241', 'MIRROR, PROTECTED ALUMINUM, 1IN DIA, 1/4IN THK', 'Only Lens inside Item #21', '', ''),
-new PicowayUpperRailParts('1630-00-0101', 'PAPER,LASER ALIGN,4\'\'x8\'\'SHEET', '', '', ''),
-new PicowayUpperRailParts('7123-00-0010', 'Assy, ND:YAG Seed, Rotating, P', 'Nd-Yag Crystal Assy', '', 'F6.1, F12.1, F29.1, F29.2'),
-new PicowayUpperRailParts('8020-00-1007', 'ND:YAG ROD, 8 MM DIA., 4 MM TH', 'Only Lens inside 7123-00-0010', '', ''),
-new PicowayUpperRailParts('7123-00-0009', 'ASSY, CR4:YAG SEED, ROTATING,', 'Cr4 Assy', '', 'F6.1, F12.1, F29.1, F29.2'),
-new PicowayUpperRailParts('8050-00-9028', 'LENS, PL/CX, 25.4mmDIA, 50mmFL', 'Only Lens inside Item #9', '', ''),
-new PicowayUpperRailParts('7122-00-9818', 'ASSY, SEED FOCUS LENS, PICOWAY', 'ASSY, SEED FOCUS LENS Item #9', 'https://i.ibb.co/8MMLGDM/7122-00-9818.png', ''),
-new PicowayUpperRailParts('7123-00-0205', 'ASSY, QW Base', 'Item #50', 'https://i.ibb.co/TThbYNz/7123-00-0205.png', ''),
-new PicowayUpperRailParts('7123-00-0127', 'ASSY, HEAD DET, POLAR INSENSIT', 'Head Dector', 'https://i.ibb.co/NrLJrPr/7123-00-0127.png', ''),
-new PicowayUpperRailParts('8055-00-0322', 'HD BEAMSPLITTER, NOPOL, WEDGED', 'Only Lens inside Head Dector(7123-00-0127)', '', 'F6.1, F12.1, F12.4'),
-new PicowayUpperRailParts('7122-00-9804', 'ASSY, BEAMSPLITTER, T755, R1064, FIXED, PICOWAY', 'Item #26', 'https://i.ibb.co/rfD7WQW/7122-00-9804.png', ''),
-new PicowayUpperRailParts('8055-00-0325', 'BEAMSPLITTER R1064 T755 PICO', 'Only Lens inside Item #26', '', ''),
-new PicowayUpperRailParts('7123-00-0012', 'ASSY, AMP PUMP FOCUSING LENS', 'Item #16', 'https://i.ibb.co/zXRWYMt/7123-00-0012.png', ''),
-new PicowayUpperRailParts('8050-00-9042', 'LENS, PL/CX, 25.4DIA, 75FL, AR', 'Only Lens inside Item #16', '', ''),
-new PicowayUpperRailParts('7122-00-9803', 'ASSY, BEAMSPLITTER, T755, R1064, ADJUSTABLE PICOWAY', 'Item #12', '', ''),
-new PicowayUpperRailParts('8055-00-0325', 'BEAMSPLITTER R1064 T755 PICO', 'Only Lens inside Item #12', '', ''),
-new PicowayUpperRailParts('7123-00-0004', 'Assy, X-Y Pump Fiber Lens', 'Item #27', 'https://i.ibb.co/TRkrk1m/7123-00-0004.png', ''),
-new PicowayUpperRailParts('8050-00-9041', 'LENS, PL/CX, 25.4DIA, 25.4FL,', 'Only Lens inside Item #27', '', ''),
-new PicowayUpperRailParts('7123-00-0244', 'Assy, PP Launch Tower', '', '', ''),
-new PicowayUpperRailParts('7123-00-0248', 'ASSY, MIRROR MOUNT,LAUNCH,3-WAVE', '', '', 'Alignment'),
-new PicowayUpperRailParts('7111-22-2803', 'PRGRM PICO 1-WIRE ALEX HEAD PCB', 'Picoway only, Programed', '', 'F23'),
-new PicowayUpperRailParts('7111-23-2803', 'PRGRM UNIVERSAL LIN PCB', 'For any LIN PCB', '', 'F23'),
-new PicowayUpperRailParts('8901-00-9404', 'GL PRO FIELD REPLACEMENT DISPLAY ASSY', 'LCD Screen', '', ''),
-new PicowayUpperRailParts('7122-00-9883', 'ASSY, HOMOGENIZER, 1064nm, PICOWAY', '', 'https://i.ibb.co/Byk7SNG/7122-00-9883.png', '1064'),
-new PicowayUpperRailParts('7122-00-9884', 'ASSY, HOMOGENIZER LENS, 532nm, PICOWAY', '', 'https://i.ibb.co/68Y57Bw/7122-00-9884.png', '532'),
-new PicowayUpperRailParts('7122-00-9809', 'KTP Assy', '', '', 'F9.3, F28.1, F28.2, F28.4'),
-new PicowayUpperRailParts('8020-00-2001', 'KTP 13 x 13 x 3 MM', '', '', '532'),
-new PicowayUpperRailParts('8053-00-3022', 'HOMOGENIZER, 532 nm', 'HOMOGENIZER lens, Inside KTP Assy', '', ''),
-new PicowayUpperRailParts('4812-01-0125', 'AIMING BEAM DIODE', '', '', ''),
-new PicowayUpperRailParts('7122-00-9832', 'ASSY, BEAM BLOCKER', 'Shutter', '', 'F3.1'),
-new PicowayUpperRailParts('7123-00-0254', 'PP Mirror Flipper', '', '', 'F3.2, 532')
+const PicowayUpperRail = [
+  new PicowayUpperRailParts('7122-00-9833', 'ASSY, MOUNTED SEED, PICOWAY', '', 'https://i.ibb.co/YdMyyTC/7122-00-9833.png', ''),
+  new PicowayUpperRailParts('7122-57-9833', 'FSE, MOUNTED SEED, PICO', '', '', ''),
+  new PicowayUpperRailParts('8015-00-1247', 'MIRROR PP 1064/650/532nm 1 DIA X .25 45 DEGREE', 'launch 8E', '', 'Low energy, Alignment'),
+  new PicowayUpperRailParts('7123-00-0227', 'Assy,Beam Combiner,Gimbal', 'item #14', '', ''),
+  new PicowayUpperRailParts('8055-00-0314', 'BEAM COMBINER R1064 T532 PICO', 'Only Lens inside item #14', '', ''),
+  new PicowayUpperRailParts('7122-00-9888', 'ASSY,COOL CHAMB,12 X 71MM,11 D', '1064 AMP Chamber', 'https://i.ibb.co/gVTCttw/7122-00-9888.png', ''),
+  new PicowayUpperRailParts('8085-18-0430', 'Faraday Isolator, 8 mm dia.', 'FR', 'https://i.ibb.co/Dkq8xm2/8085-18-0430.png', ''),
+  new PicowayUpperRailParts('7123-00-0036', 'ASSY, SINGLE1064 COLL LENS, 120 MM FL', 'Item #13', 'https://i.ibb.co/y8bkNVf/7123-00-0036.png', ''),
+  new PicowayUpperRailParts('8050-00-9026', 'LENS, PL/CX, 25.4mmDIA, 120mmF', 'Only Lens inside Item #13, 7123-00-0036', '', ''),
+  new PicowayUpperRailParts('7123-00-0077', 'ASSY MIRROR GIMBAL MOUNT PIC', 'Item #8', '', 'Alignment'),
+  new PicowayUpperRailParts('7123-00-0225', 'Assy,Dual Band,Gimbal', 'Item #3', '', 'Alignment'),
+  new PicowayUpperRailParts('8055-00-0316', 'BEAM COMBINER R1064/532 T650 P', 'Only Lens inside Item #3', '', ''),
+  new PicowayUpperRailParts('7123-00-0226', 'Assy,Aiming Beam Mirror,Gimbal', 'Item #21', '', ''),
+  new PicowayUpperRailParts('8015-00-1241', 'MIRROR, PROTECTED ALUMINUM, 1IN DIA, 1/4IN THK', 'Only Lens inside Item #21', '', ''),
+  new PicowayUpperRailParts('1630-00-0101', 'PAPER,LASER ALIGN,4\'\'x8\'\'SHEET', '', '', ''),
+  new PicowayUpperRailParts('7123-00-0010', 'Assy, ND:YAG Seed, Rotating, P', 'Nd-Yag Crystal Assy', '', 'F6.1, F12.1, F29.1, F29.2'),
+  new PicowayUpperRailParts('8020-00-1007', 'ND:YAG ROD, 8 MM DIA., 4 MM TH', 'Only Lens inside 7123-00-0010', '', ''),
+  new PicowayUpperRailParts('7123-00-0009', 'ASSY, CR4:YAG SEED, ROTATING,', 'Cr4 Assy', '', 'F6.1, F12.1, F29.1, F29.2'),
+  new PicowayUpperRailParts('8050-00-9028', 'LENS, PL/CX, 25.4mmDIA, 50mmFL', 'Only Lens inside Item #9', '', ''),
+  new PicowayUpperRailParts('7122-00-9818', 'ASSY, SEED FOCUS LENS, PICOWAY', 'ASSY, SEED FOCUS LENS Item #9', 'https://i.ibb.co/8MMLGDM/7122-00-9818.png', ''),
+  new PicowayUpperRailParts('7123-00-0205', 'ASSY, QW Base', 'Item #50', 'https://i.ibb.co/TThbYNz/7123-00-0205.png', ''),
+  new PicowayUpperRailParts('7123-00-0127', 'ASSY, HEAD DET, POLAR INSENSIT', 'Head Dector', 'https://i.ibb.co/NrLJrPr/7123-00-0127.png', ''),
+  new PicowayUpperRailParts('8055-00-0322', 'HD BEAMSPLITTER, NOPOL, WEDGED', 'Only Lens inside Head Dector(7123-00-0127)', '', 'F6.1, F12.1, F12.4'),
+  new PicowayUpperRailParts('7122-00-9804', 'ASSY, BEAMSPLITTER, T755, R1064, FIXED, PICOWAY', 'Item #26', 'https://i.ibb.co/rfD7WQW/7122-00-9804.png', ''),
+  new PicowayUpperRailParts('8055-00-0325', 'BEAMSPLITTER R1064 T755 PICO', 'Only Lens inside Item #26', '', ''),
+  new PicowayUpperRailParts('7123-00-0012', 'ASSY, AMP PUMP FOCUSING LENS', 'Item #16', 'https://i.ibb.co/zXRWYMt/7123-00-0012.png', ''),
+  new PicowayUpperRailParts('8050-00-9042', 'LENS, PL/CX, 25.4DIA, 75FL, AR', 'Only Lens inside Item #16', '', ''),
+  new PicowayUpperRailParts('7122-00-9803', 'ASSY, BEAMSPLITTER, T755, R1064, ADJUSTABLE PICOWAY', 'Item #12', '', ''),
+  new PicowayUpperRailParts('8055-00-0325', 'BEAMSPLITTER R1064 T755 PICO', 'Only Lens inside Item #12', '', ''),
+  new PicowayUpperRailParts('7123-00-0004', 'Assy, X-Y Pump Fiber Lens', 'Item #27', 'https://i.ibb.co/TRkrk1m/7123-00-0004.png', ''),
+  new PicowayUpperRailParts('8050-00-9041', 'LENS, PL/CX, 25.4DIA, 25.4FL,', 'Only Lens inside Item #27', '', ''),
+  new PicowayUpperRailParts('7123-00-0244', 'Assy, PP Launch Tower', '', '', ''),
+  new PicowayUpperRailParts('7123-00-0248', 'ASSY, MIRROR MOUNT,LAUNCH,3-WAVE', '', '', 'Alignment'),
+  new PicowayUpperRailParts('7111-22-2803', 'PRGRM PICO 1-WIRE ALEX HEAD PCB', 'Picoway only, Programed', '', 'F23'),
+  new PicowayUpperRailParts('7111-23-2803', 'PRGRM UNIVERSAL LIN PCB', 'For any LIN PCB', '', 'F23'),
+  new PicowayUpperRailParts('8901-00-9404', 'GL PRO FIELD REPLACEMENT DISPLAY ASSY', 'LCD Screen', '', ''),
+  new PicowayUpperRailParts('7122-00-9883', 'ASSY, HOMOGENIZER, 1064nm, PICOWAY', '', 'https://i.ibb.co/Byk7SNG/7122-00-9883.png', '1064'),
+  new PicowayUpperRailParts('7122-00-9884', 'ASSY, HOMOGENIZER LENS, 532nm, PICOWAY', '', 'https://i.ibb.co/68Y57Bw/7122-00-9884.png', '532'),
+  new PicowayUpperRailParts('7122-00-9809', 'KTP Assy', '', '', 'F9.3, F28.1, F28.2, F28.4'),
+  new PicowayUpperRailParts('8020-00-2001', 'KTP 13 x 13 x 3 MM', '', '', '532'),
+  new PicowayUpperRailParts('8053-00-3022', 'HOMOGENIZER, 532 nm', 'HOMOGENIZER lens, Inside KTP Assy', '', ''),
+  new PicowayUpperRailParts('4812-01-0125', 'AIMING BEAM DIODE', '', '', ''),
+  new PicowayUpperRailParts('7122-00-9832', 'ASSY, BEAM BLOCKER', 'Shutter', '', 'F3.1'),
+  new PicowayUpperRailParts('7123-00-0254', 'PP Mirror Flipper', '', '', 'F3.2, 532')
 ];
 
-const PicowayLowerLevel =[
-new PicowayLowerLevelParts('7122-00-9792', 'ASSY, LENS/RECEP, AMP FIBER, PICOWAY', 'Lower level AMP fiber receptacle', '', ''),
-new PicowayLowerLevelParts('7122-00-9906', 'ASSY, SEED FIBER LENS, PICOWAY', 'Lower level Seed fiber receptacle', '', ''),
-new PicowayLowerLevelParts('7122-00-9786', 'Assy, Laser Head, Alex, Picoway', 'Lower level', '', ''),
-new PicowayLowerLevelParts('7122-00-4050', 'ASSY AMP PUMP FIBER PICO', 'Lower level Fiber', '', ''),
-new PicowayLowerLevelParts('7122-00-4049', 'SEED PUMP FIBER PICO', 'Lower level Fiber', '', ''),
-new PicowayLowerLevelParts('7123-00-0039', 'ASSY, CUBE BEAMSPLITTER, HIGH LDT , 755NM', 'Cube', 'https://i.ibb.co/gWZ31Km/7123-00-0039.png', 'F29.1, F29.2'),
-new PicowayLowerLevelParts('1303-00-0045', 'SPACER, LASER HEAD, PICOWAY', '', 'https://i.ibb.co/PrBjppQ/1303-00-0045.png', ''),
-new PicowayLowerLevelParts('3190-00-0105', 'RFI, STP, 16\'\' L, WITH TAPE', '', 'https://i.ibb.co/1Mp10Pr/3190-00-0105.png', ''),
-new PicowayLowerLevelParts('1301-00-9449', 'FINGERS HV TAB, SPECTRUM', '', 'https://i.ibb.co/GxB6kyw/1301-00-9449.png', ''),
-new PicowayLowerLevelParts('2818-00-0600', 'WASHER,LOCK,SPLIT #6 ID', '', 'https://i.ibb.co/VmxwxHd/2820-00-0600.png', ''),
-new PicowayLowerLevelParts('2832-OC-0606', 'SCR,CAP,SOC HD 6-32 X 3/8', '', '', ''),
-new PicowayLowerLevelParts('3160-02-0013', 'Red Manifold O-rings', '', '', ''),
-new PicowayLowerLevelParts('3160-01-0012', 'White O-rings', '', '', ''),
-new PicowayLowerLevelParts('2849-04-0854', 'Head Screws', '', '', ''),
-new PicowayLowerLevelParts('9908-17-0408', 'Flashlamp', '2EA for each Laser Head', 'https://i.ibb.co/mBbFxtp/9908-17-0408.png', 'F12.1, F14.1'),
-new PicowayLowerLevelParts('7122-00-9207', 'Pump Cavity', '', '', ''),
-new PicowayLowerLevelParts('1301-00-7763', 'Yag ROD', '', '', ''),
-new PicowayLowerLevelParts('1301-00-7014', 'Alex ROD', '', '', ''),
+const PicowayLowerLevel = [
+  new PicowayLowerLevelParts('7122-00-9792', 'ASSY, LENS/RECEP, AMP FIBER, PICOWAY', 'Lower level AMP fiber receptacle', '', ''),
+  new PicowayLowerLevelParts('7122-00-9906', 'ASSY, SEED FIBER LENS, PICOWAY', 'Lower level Seed fiber receptacle', '', ''),
+  new PicowayLowerLevelParts('7122-00-9786', 'Assy, Laser Head, Alex, Picoway', 'Lower level', '', ''),
+  new PicowayLowerLevelParts('7122-00-4050', 'ASSY AMP PUMP FIBER PICO', 'Lower level Fiber', '', ''),
+  new PicowayLowerLevelParts('7122-00-4049', 'SEED PUMP FIBER PICO', 'Lower level Fiber', '', ''),
+  new PicowayLowerLevelParts('7123-00-0039', 'ASSY, CUBE BEAMSPLITTER, HIGH LDT , 755NM', 'Cube', 'https://i.ibb.co/gWZ31Km/7123-00-0039.png', 'F29.1, F29.2'),
+  new PicowayLowerLevelParts('1303-00-0045', 'SPACER, LASER HEAD, PICOWAY', '', 'https://i.ibb.co/PrBjppQ/1303-00-0045.png', ''),
+  new PicowayLowerLevelParts('3190-00-0105', 'RFI, STP, 16\'\' L, WITH TAPE', '', 'https://i.ibb.co/1Mp10Pr/3190-00-0105.png', ''),
+  new PicowayLowerLevelParts('1301-00-9449', 'FINGERS HV TAB, SPECTRUM', '', 'https://i.ibb.co/GxB6kyw/1301-00-9449.png', ''),
+  new PicowayLowerLevelParts('2818-00-0600', 'WASHER,LOCK,SPLIT #6 ID', '', 'https://i.ibb.co/VmxwxHd/2820-00-0600.png', ''),
+  new PicowayLowerLevelParts('2832-OC-0606', 'SCR,CAP,SOC HD 6-32 X 3/8', '', '', ''),
+  new PicowayLowerLevelParts('3160-02-0013', 'Red Manifold O-rings', '', '', ''),
+  new PicowayLowerLevelParts('3160-01-0012', 'White O-rings', '', '', ''),
+  new PicowayLowerLevelParts('2849-04-0854', 'Head Screws', '', '', ''),
+  new PicowayLowerLevelParts('9908-17-0408', 'Flashlamp', '2EA for each Laser Head', 'https://i.ibb.co/mBbFxtp/9908-17-0408.png', 'F12.1, F14.1'),
+  new PicowayLowerLevelParts('7122-00-9207', 'Pump Cavity', '', '', ''),
+  new PicowayLowerLevelParts('1301-00-7763', 'Yag ROD', '', '', ''),
+  new PicowayLowerLevelParts('1301-00-7014', 'Alex ROD', '', '', ''),
 ];
 
-const PicowayHarness =[
-new PicowayHarnessParts('6032-00-0411', 'CABLE, LASER RECEPTACLE TO LASER HARNESS, PICOWAY', '', 'https://i.ibb.co/wgn5ZpB/6032-00-0411.png', 'F10.2'),
-new PicowayHarnessParts('7122-00-9853', 'ASSY UPPER RAIL HARNESS PICOWAY', '', 'https://i.ibb.co/Wx58h0c/7122-00-9853.png', ''),
-new PicowayHarnessParts('7122-00-9854', 'ASSY SIGNAL HARNESS PICOWAY', '', 'https://i.ibb.co/jzqnwzm/7122-00-9854.png', ''),
-new PicowayHarnessParts('7122-00-9860', 'Handpiece Cable', '', '', ''),
-new PicowayHarnessParts('6032-00-0410', 'CABLE, HP PLUG TO LASER PLUG, PICOWAY', 'Arm cable', 'https://i.ibb.co/df0SqXL/6032-00-0410.png', 'F10.2'),
+const PicowayHarness = [
+  new PicowayHarnessParts('6032-00-0411', 'CABLE, LASER RECEPTACLE TO LASER HARNESS, PICOWAY', '', 'https://i.ibb.co/wgn5ZpB/6032-00-0411.png', 'F10.2'),
+  new PicowayHarnessParts('7122-00-9853', 'ASSY UPPER RAIL HARNESS PICOWAY', '', 'https://i.ibb.co/Wx58h0c/7122-00-9853.png', ''),
+  new PicowayHarnessParts('7122-00-9854', 'ASSY SIGNAL HARNESS PICOWAY', '', 'https://i.ibb.co/jzqnwzm/7122-00-9854.png', ''),
+  new PicowayHarnessParts('7122-00-9860', 'Handpiece Cable', '', '', ''),
+  new PicowayHarnessParts('6032-00-0410', 'CABLE, HP PLUG TO LASER PLUG, PICOWAY', 'Arm cable', 'https://i.ibb.co/df0SqXL/6032-00-0410.png', 'F10.2'),
 ];
 
 
 const PicowayFuidSystem = [
-new PicowayFuidSystemParts('7122-00-9238', 'ASSY RESERVOIR SPECTRUM', 'Water Tank', 'https://i.ibb.co/fSfqP6v/7122-00-9238.png', 'F7.5'),
-new PicowayFuidSystemParts('7122-00-9234', 'ASSY FLUID TUBING KIT SPECTRUM', '', '', 'F7.1, Water Leak'),
-new PicowayFuidSystemParts('1301-00-9390', 'TUBING, RESEVOIR TO PUMP', '', '', ''),
-new PicowayFuidSystemParts('7122-00-9592', 'ASSY, FLOW SW, 0.5GPM, COMP FITTINGS', '', '', 'F7.3'),
-new PicowayFuidSystemParts('3450-00-0355', 'PRO SERIES DI CARTRIDGE/ FILTER', '', 'https://i.ibb.co/JvczyLV/3450-00-0355.png', ''),
-new PicowayFuidSystemParts('3412-14-0605', 'PLUG,QC,EL,DLRN/EPR,3/8BRB,VLV', '', '', 'Water Leak'),
-new PicowayFuidSystemParts('7122-00-9598', 'ASSY, FLUID MODULE GMAX PRO', '', '', 'Water Leak, Heat Exchanger, '),
-new PicowayFuidSystemParts('7122-00-9228', 'ASSY TWO ROW HX EXCHANGER PWM FANS', '', 'https://i.ibb.co/2KG5LDv/7122-00-9228.png', ''),
-new PicowayFuidSystemParts('3414-00-0248 ', 'Pump, 5.3 GPM, 24VDC, 45W, Mod', '','https://i.ibb.co/MR0WT8r/3414-00-0248.jpg', 'F7.3'),
-new PicowayFuidSystemParts('7122-00-9262', 'DI LEVEL SWITCH ASSY SPECTRUM', '', 'https://i.ibb.co/bHfV6gc/7122-00-9262.png', 'F7.5'),
-new PicowayFuidSystemParts('3412-14-0607', 'QC connector', '', '', 'F7.5'),
+  new PicowayFuidSystemParts('7122-00-9238', 'ASSY RESERVOIR SPECTRUM', 'Water Tank', 'https://i.ibb.co/fSfqP6v/7122-00-9238.png', 'F7.5'),
+  new PicowayFuidSystemParts('7122-00-9234', 'ASSY FLUID TUBING KIT SPECTRUM', '', '', 'F7.1, Water Leak'),
+  new PicowayFuidSystemParts('1301-00-9390', 'TUBING, RESEVOIR TO PUMP', '', '', ''),
+  new PicowayFuidSystemParts('7122-00-9592', 'ASSY, FLOW SW, 0.5GPM, COMP FITTINGS', '', '', 'F7.3'),
+  new PicowayFuidSystemParts('3450-00-0355', 'PRO SERIES DI CARTRIDGE/ FILTER', '', 'https://i.ibb.co/JvczyLV/3450-00-0355.png', ''),
+  new PicowayFuidSystemParts('3412-14-0605', 'PLUG,QC,EL,DLRN/EPR,3/8BRB,VLV', '', '', 'Water Leak'),
+  new PicowayFuidSystemParts('7122-00-9598', 'ASSY, FLUID MODULE GMAX PRO', '', '', 'Water Leak, Heat Exchanger, '),
+  new PicowayFuidSystemParts('7122-00-9228', 'ASSY TWO ROW HX EXCHANGER PWM FANS', '', 'https://i.ibb.co/2KG5LDv/7122-00-9228.png', ''),
+  new PicowayFuidSystemParts('3414-00-0248 ', 'Pump, 5.3 GPM, 24VDC, 45W, Mod', '', 'https://i.ibb.co/MR0WT8r/3414-00-0248.jpg', 'F7.3'),
+  new PicowayFuidSystemParts('7122-00-9262', 'DI LEVEL SWITCH ASSY SPECTRUM', '', 'https://i.ibb.co/bHfV6gc/7122-00-9262.png', 'F7.5'),
+  new PicowayFuidSystemParts('3412-14-0607', 'QC connector', '', '', 'F7.5'),
+];
+
+
+const NordlysApplicator = [
+  //new NordlysApplicatorParts('', '', '', '', 'Handpiece'),
+  new NordlysApplicatorParts('9APP7744-CNDL', 'Applicator HR 600 600 - 950 nm - Legal Mfg: Candela', '21J/cm², 10mmx48mm, 200,000', '', 'Handpiece'),
+  new NordlysApplicatorParts('9APP7745-CNDL', 'Applicator HRL 600 600 - 950 nm - Legal Mfg: Candela', '21J/cm², 18mmx48mm, 100,000', '', 'Handpiece'),
+  new NordlysApplicatorParts('9APP7746-CNDL', 'Applicator HRD 645 645 - 950 nm - Legal Mfg: Candela', '18.5J/cm², 10mmx48mm, 200,000', '', 'Handpiece'),
+  new NordlysApplicatorParts('9APP7747-CNDL', 'Applicator VL 555 555 - 950 nm', '22J/cm², 10mmx48mm, 75,000', '', 'Handpiece'),
+  new NordlysApplicatorParts('9APP7748-CNDL', 'Applicator PR 530 530 - 750 nm - Legal Mfg: Candela', '19J/cm², 10mmx48mm, 75,000', '', 'Handpiece'),
+  new NordlysApplicatorParts('9APP7749-CNDL', 'Applicator PL 400 400 - 720 nm - Legal Mfg: Candela', '18J/cm², 10mmx48mm, 200,000', '', 'Handpiece'),
+  new NordlysApplicatorParts('9APP7750-CNDL', 'Applicator Nd:YAG 1064 nm - Legal Mfg: Candela', '500J/cm², ø1.5-5.0mm, No Limit', '', 'Handpiece'),
+  new NordlysApplicatorParts('9APP7814-CNDL', 'Applicator VLS 555 555 - 950 nm - Legal Mfg: Candela ', '22J/cm², 90mm², 50,000', '', 'Handpiece'),
+  new NordlysApplicatorParts('9APP7815-CNDL', 'Applicator PRS 530 530 - 750 nm - Legal Mfg: Candela', '19J/cm², 90mm², 50,000', '', 'Handpiece'),
+  new NordlysApplicatorParts('9APP7829-CNDL', 'Applicator Frax 1550 1550 nm - Legal Mfg: Candela', '15W, Approx200μmx200μm, No Limit', '', 'Handpiece'),
 ];
 
 // NordlysConsumableParts 객체 생성
 const NordlysConsumable = [
-  new NordlysConsumableParts('9APP7745', 'Applicator HRL 600 600 - 950 nm', 'Handpiece', '', ''),
-  new NordlysConsumableParts('9APP7748-CNDL', 'Applicator PR 530 530 - 750 nm', 'Handpiece', '', ''),
-  new NordlysConsumableParts('9APP7747', 'Applicator VL 555 555 - 950 nm', 'Handpiece', '', ''),
-  new NordlysConsumableParts('9APP7829-CNDL', 'Applicator Frax 1550 1550 nm', 'Handpiece', '', ''),
-  new NordlysConsumableParts('3WFA7151', 'WiFi Adaptor', '', '', ''),
-  new NordlysConsumableParts('9WAT7407', 'Demineralized Water - 5 Liters', '', '', ''),
-  new NordlysConsumableParts('9WAT7786', 'Water Fill Tube - Nordlys/Sirius/Ydun', '', '', ''),
+  //new NordlysConsumableParts('', '', '', '', ''),
+  new NordlysConsumableParts('9WAT7407', 'Demineralized Water - 5 Liters', '', 'https://i.ibb.co/R7QMTfN/9WAT7407.png', ''),
+  new NordlysConsumableParts('9WAT7786', 'Water Fill Tube - Nordlys/Sirius/Ydun', '', 'https://i.ibb.co/F0PJJXZ/9WAT7786.png', ''),
   new NordlysConsumableParts('9PAC8023', 'Package of 10 rollers', 'New type, Long', '', ''),
   new NordlysConsumableParts('9PAC8014', 'Package of 10 rollers', 'Frax 1940/ Frax 1550 Rollers - Package of 10, individually wrapped rollers in metal case', '', ''),
-  new NordlysConsumableParts('9SAP7711', 'Sapphire Tip', 'Nd-Yag HP Tip', '', ''),
-  new NordlysConsumableParts('4APL7377', 'Semi-circular Tip', 'Nd-Yag HP Tip', '', ''),
-  new NordlysConsumableParts('4APL7376', 'Circular tip:', 'Nd-Yag HP Tip', '', ''),
-  new NordlysConsumableParts('2LAB7543-A01', ' laser warning sign', '', '', ''),
+  new NordlysConsumableParts('9SAP7711', 'Sapphire Tip', 'Nd-Yag HP Tip', 'https://i.ibb.co/4sqtfjh/9SAP7711.png', ''),
+  new NordlysConsumableParts('4APL7377', 'Semi-circular Tip', 'Nd-Yag HP Tip', 'https://i.ibb.co/zWdwzJm/4APL7377.png', ''),
+  new NordlysConsumableParts('4APL7376', 'Circular tip:', 'Nd-Yag HP Tip', 'https://i.ibb.co/Y8t4sMf/4APL7376.png', ''),
+  new NordlysConsumableParts('2LAB7543-A01', ' laser warning sign', '', 'https://i.ibb.co/hMK3gwv/2-LAB7543-A01.png', ''),
   new NordlysConsumableParts('2SWI7548', 'Key Switch', '', '', ''),
   new NordlysConsumableParts('9KIT7834', 'Foot Switch', '', '', 'F13.2, F13.4'),
   new NordlysConsumableParts('9APH7302', 'Wall-Mount Rack for 4 Ellipse IPL/Nd:YAG Applicators', 'Applicator rack. Hold up to 4 Ellipse IPL/Nd:YAG applicators. Wall mounted', '', ''),
-  new NordlysConsumableParts('9APH7839', 'Wall-Mount Rack for 1 Frax + 3 Ellipse IPL/Nd:YAG Applicators', 'Applicator rack. Hold up to 3 Ellipse IPL/Nd:YAG applicators and 1 Frax applicator. Wall mounted', '', ''),
+  new NordlysConsumableParts('9APH7839', 'Wall-Mount Rack for 1 Frax + 3 Ellipse IPL/Nd:YAG Applicators', 'Applicator rack. Hold up to 3 Ellipse IPL/Nd:YAG applicators and 1 Frax applicator. Wall mounted', 'https://i.ibb.co/Q8x2QLQ/9APH7839.png', ''),
   new NordlysConsumableParts('PU00531EN-NA', 'Nordlys Product Brochure, Ellipse, US', 'Brochure', '', ''),
   new NordlysConsumableParts('PU02781EN-NA', 'Skin Resurfacing Patient Pamphlet, Nordlys (US)', 'Brochure', '', ''),
   new NordlysConsumableParts('PU02591EN-NA', 'Skin Rejuvenation Patient Pamphlet, Nordlys (US)', 'Brochure', '', ''),
@@ -815,102 +834,192 @@ const NordlysConsumable = [
   new NordlysConsumableParts('PU00801EN-NA', 'Light & Bright Pull-up Banner', '', '', ''),
   new NordlysConsumableParts('PU00800EN-NA', 'Light & Bright Poster', '', '', ''),
   new NordlysConsumableParts('9DNG7649', 'Green 25,000 PPS', 'Nordlys, ', '', ''),
-  new NordlysConsumableParts('2EYE7140', 'Patient Safety Glasses - Steel', '', '', ''),
-  new NordlysConsumableParts('4DER7059', 'Light Guide Protector for Ellipse IPL applicators', 'HR600, HRD645, PL400, PR530, VL555', '', ''),
+  new NordlysConsumableParts('2EYE7894', 'Operators Goggles for 1064, 1550, 1940', '', '', 'Goggles'),
+  new NordlysConsumableParts('2EYE7140', 'Patient Safety Glasses - Steel', '', '', 'Goggles'),
+  new NordlysConsumableParts('4DER7059', 'Light Guide Protector for Ellipse IPL applicators 10x48 mm', 'HR600, HRD645, PL400, PR530, VL555', 'https://i.ibb.co/VWxBrHh/4DER7059.png', ''),
+  new NordlysConsumableParts('2EYE0801', 'Patient Goggles', 'White Plastic', '', ''),
+  new NordlysConsumableParts('2EYE7673', 'Operator Eye protection	for all Ellipse IPL applicators', 'Grey (small-standard)', '', ''),
+  new NordlysConsumableParts('2EYE7674', 'Operator Eye protection	for all Ellipse IPL applicators', 'Grey (large-optional)', '', ''),
+  new NordlysConsumableParts('2EYE7641', 'Operator Eye protection for Nd:YAG 1064nm and Frax 1550 applicators', 'Green (standard)', '', ''),
+  new NordlysConsumableParts('2EYE7642', 'Operator Eye protection for Nd:YAG 1064nm and Frax 1550 applicators', 'Clear (optional)', '', ''),
+  new NordlysConsumableParts('9DNG7649', 'Green 25,000 PPS', 'Nordlys, SPT+, 12PL, MultiFlex+', '', ''),
+  new NordlysConsumableParts('S9SCR7802', 'Set of screws, 10 of each', '', '', ''),
+  new NordlysConsumableParts('4APL7320', 'Rubber protection for HRL 600 applicator 18x48 mm', '', '', ''),
 ];
 
 
 // NordlysElectronicParts 객체 생성
 const NordlysElectronic = [
+  //new NordlysElectronicParts('', '', '', '', ''),
+  new NordlysElectronicParts('3WFA7151', 'WiFi Adaptor', '', '', ''),
   new NordlysElectronicParts('S4COM7453', 'Computer Module', 'Computer Module, low version (specify system type and s/n when ordering)', '', ''),
   new NordlysElectronicParts('S4COM7553', 'Computer Module', 'Computer Module, high version (specify system type and s/n when ordering)', '', ''),
-  new NordlysElectronicParts('S4COM7764', 'Computer Module, Nordlys, Sirius and Frax PRO version 12.6', '', '', ''),
-  new NordlysElectronicParts('S9PCB7719', 'HW Interface Board', '', '', ''),
-  new NordlysElectronicParts('S9MEC7735', 'Display Module', 'nordlys', '', ''),
+  new NordlysElectronicParts('S4COM7764', 'Computer Module, Nordlys, Sirius and Frax PRO version 12.6', '', '', 'Powered on, Candela logo lit but screen blank, Display off, No Signal'),
+  new NordlysElectronicParts('S9PCB7719', 'HW Interface Board', '', '', 'Error 16, No Signal'),
+  new NordlysElectronicParts('S9MEC7735', 'Display Module', 'nordlys', '', 'Powered on, Candela logo lit but screen blank, Display off, No Signal'),
   new NordlysElectronicParts('S9IOM7769', 'I/O Board', '', '', ''),
-  new NordlysElectronicParts('S9MEC7735', 'Display Module', 'nordlys', '', ''),
-  new NordlysElectronicParts('S9FSH7742', 'Flash Module', 'nordlys', '', ''),
-  new NordlysElectronicParts('S3BAT7137', 'Backup battery for computer module.', 'CR2032 with leads and connector. UL listed.', '', ''),
-  new NordlysElectronicParts('S4CBL7446', 'Lan cable', '', '', ''),
-  new NordlysElectronicParts('S4CBL7428', 'HDMI cabel', '', '', ''),
+  new NordlysElectronicParts('S9FSH7742', 'Flash Module', 'nordlys', '', 'Display off, No Signal'),
+  new NordlysElectronicParts('S9PSU7741', 'Power Module', '', '', ''),
+  new NordlysElectronicParts('S3BAT7137', 'Backup battery for computer module.', 'CR2032 with leads and connector. UL listed.', '', 'Powered on, Candela logo lit but screen blank, Display off'),
+  new NordlysElectronicParts('S4CBL7446', 'Lan cable', '', '', 'No Signal'),
+  new NordlysElectronicParts('S4CBL7428', 'HDMI cabel', '', '', 'Powered on, Candela logo lit but screen blank, No Signal'),
+  new NordlysElectronicParts('S3FUS7135', 'Fuse for mains voltage 200 - 240 VAC 10A', '', '', ''),
+  new NordlysElectronicParts('S3FUS7136', 'Fuse for mains voltage 100 - 120 VAC 16A', '', '', ''),
+  new NordlysElectronicParts('S3FUS7138', 'Minifuse 5A for HW interface board 10 pcs', '', '', ''),
+  new NordlysElectronicParts('S9PCB7724', 'Air pump driver board (older nordlys)', '', '', ''),
+  new NordlysElectronicParts('S4MEC7524', 'Panel with start switch and emergency switch	Interlock Plug', '', '', ''),
+  new NordlysElectronicParts('S2PMP7534', 'Air pump for Nd:YAG cooling air', '', '', ''),
+  new NordlysElectronicParts('S2FAN7531', 'Fan for cooling module', '', '', ''),
+  new NordlysElectronicParts('3ISO7149', 'LAN Medical Isolator MI1005', '', '', ''),
 ];
 
 // NordlysElectronicParts 객체 생성
 const Nordlysfluid = [
-  new NordlysfluidParts('S9MEC7736', 'Pump Module (water pump module)', '', '', ''),
-  new NordlysfluidParts('S2FLO7206', 'Flow Sensor, w/o cable', '', '', ''),
-  new NordlysfluidParts('S2FIT7536', 'Water connector for output panel (connector only)', '', '', ''),
+  // new NordlysfluidParts('', '', '', '', ''),
+  new NordlysfluidParts('S9MEC7736', 'Pump Module (water pump module)', '', 'https://i.ibb.co/nMDzDvw/S9-MEC7736.png', 'water leaking, Error 16'),
+  new NordlysfluidParts('S2FLO7206', 'Flow Sensor, w/o cable', '', '', 'Error 16'),
+  new NordlysfluidParts('S2FIT7536', 'Water connector for output panel (connector only)', '', 'https://i.ibb.co/MRZzcww/S2-FIT7536.png', 'water leaking, Error 16'),
   new NordlysfluidParts('S9MEC7730', 'Cooling Module', '', '', ''),
   new NordlysfluidParts('S4MEC7422', 'Water tank', '', '', ''),
-  new NordlysfluidParts('S2FIT7536', 'Water connector for output panel (connector only)', '', '', ''),
+  new NordlysfluidParts('S9PCB7720', 'Water Level Sensor', '', '', ''),
+  new NordlysfluidParts('S9TMS7732', 'Water temperature sensor', '', '', ''),
+  new NordlysfluidParts('S2FLW7755', '3-way valve', '', '', ''),
+  new NordlysfluidParts('S2FIL7756', 'Water filter for pump module', '', '', ''),
+];
+
+const NordlysCable = [
+  //new NordlysCableParts('', '', '', '', ''),
+    new NordlysCableParts('9CBL7756', 'Mains power cable 200 - 240 VAC with Schuko plug, 4m', '', '', 'Consumable'),
+    new NordlysCableParts('9CBL7757', 'Mains power cable 200 - 240 VAC with UK plug, 4m', '', '', 'Consumable'),
+    new NordlysCableParts('9CBL7758', 'Mains power cable, 125 VAC with Japan connector, 4m', '', '', 'Consumable'),
+    new NordlysCableParts('9CBL7759', 'Mains power cable 100 - 120 VAC wth US connector, 4m', '', '', 'Consumable'),
+    new NordlysCableParts('S4CBL7431', 'HWIF On/Off Buttom cable', '', '', ''),
+    new NordlysCableParts('S4CBL7432', 'HWIF Pressure sensor cable', '', '', ''),
+    new NordlysCableParts('S4CBL7433', 'HWIF to PSU', '', '', ''),
+    new NordlysCableParts('S4CBL7434', 'HWIF PC Power', '', '', ''),
+    new NordlysCableParts('S4CBL7435', 'HWIF Water Pump', '', '', ''),
+    new NordlysCableParts('S4CBL7436', 'HWIF to cooler Fan', '', '', ''),
+    new NordlysCableParts('S4CBL7437', 'HWIF Valve', '', '', ''),
+    new NordlysCableParts('S4CBL7438', 'HWIF Flow Sensor Cable', '', '', ''),
+    new NordlysCableParts('S4CBL7440', 'HWIF I/O Safety', '', '', ''),
+    new NordlysCableParts('S4CBL7441', 'HWIF Display Power', '', '', ''),
+    new NordlysCableParts('S4CBL7444', 'HWIF to Flash SPI', '', '', ''),
+    new NordlysCableParts('S4CBL7447', 'HWIF Switch Cable', '', '', ''),
+    new NordlysCableParts('S4CBL7448', 'HWIF to Air Pump Driver', '', '', ''),
+    new NordlysCableParts('S4CBL7450', 'HWIF PSU Peltier Power', '', '', ''),
+    new NordlysCableParts('S4CBL7451', 'PSU Flash', '', '', ''),
+    new NordlysCableParts('S4CBL7446', 'Lan Cable', '', '', ''),
+    new NordlysCableParts('S4CBL7452', 'USB A/B', '', '', ''),
+    new NordlysCableParts('S4CBL7428', 'HDMI cable', '', '', ''),
+    new NordlysCableParts('S4CBL7439', 'HWIF Double light conductor', '', '', ''),
+    new NordlysCableParts('S4CBL7442', 'Lemo cable for connection A', '', '', ''),
+    new NordlysCableParts('S4CBL7443', 'Lemo cable for connection B', '', '', ''),
+  ];
+
+const NordlysSkin = [
+  // new NordlysSkinParts('', '', '', '', ''),
+  new NordlysSkinParts('S4COV7411', 'Rear cover, white', '', '', ''),
+  new NordlysSkinParts('S4COV7412', 'Front cover, white', '', '', ''),
+  new NordlysSkinParts('S4COV7413', 'Base cover. white', '', '', ''),
+  new NordlysSkinParts('S2WHE7527', 'Wheel (caster)', '', '', ''),
+  new NordlysSkinParts('S9MEC7731', 'Base plate for output panel', '', '', ''),
+  new NordlysSkinParts('S2FIT7538', 'Air connector for output panel', '', '', ''),
+  new NordlysSkinParts('S9MEC7738', 'Movable arm, complete with cables', '', '', ''),
+  new NordlysSkinParts('S4MEC7487', 'Tray, White', '', '', ''),
+  new NordlysSkinParts('S4MEC7508', 'Tray, black', '', '', ''),
+  new NordlysSkinParts('S9FIL7416', 'Dust filter kit for flash module and power module', '', '', ''),
+  new NordlysSkinParts('9KIT7890', 'Frax Support Arm with Holder', '', '', ''),
 ];
 
 //Matrix Pro Parts 객체 생성
-const profoundmatrixprop = [
-  // new MetrixProParts('','','','',''),
-  new ProfoundMetrixProParts('FG71851', 'Applicator Assy, Matrix Pro', '', '', ''),
-  new ProfoundMetrixProParts('AS79444', 'PCBA, RF Module, eTwo', '', '', ''),
-  new ProfoundMetrixProParts('AS09614', 'SBC, Pico-ITX, INTEL CPU. Profound Matrix', '', '', ''),
-  new ProfoundMetrixProParts('AS95121', 'PCBA, Splitter Base, eTwo', '', '', ''),
-  new ProfoundMetrixProParts('AS78481', 'PCBA, Splitter Distributor, eTwo', '', '', ''),
-  new ProfoundMetrixProParts('AS9571A', 'RF Module Assymbly', '', '', ''),
-  new ProfoundMetrixProParts('AS9573A', 'Computer Module Assembly', '', '', ''),
-  new ProfoundMetrixProParts('AS9576A', 'Lower Tray Assembly', '', '', ''),
-  new ProfoundMetrixProParts('AS9580A', 'Power Supply Assembly', '', '', ''),
-  new ProfoundMetrixProParts('AS9596A', 'Loud Speaker with Harness, Matrix Pro', '', '', ''),
-  new ProfoundMetrixProParts('HR07868', 'Harness,CPU TO LCD (LVDS), Profound Matrix', '', '', ''),
-  new ProfoundMetrixProParts('HR07869', 'Harness,IO to Display, Profound Matrix', '', '', ''),
-  new ProfoundMetrixProParts('HR7845A', 'Harness, CPU I/O Board Audio, Matrix Pro', '', '', ''),
-  new ProfoundMetrixProParts('HR7846A', 'Harness, CPU to I/O, Matrix Pro', '', '', ''),
-  new ProfoundMetrixProParts('HR7849A', 'Harness, Splitter to Applicator, Matrix Pro', '', '', ''),
-  new ProfoundMetrixProParts('HR78551', 'SubRF/Matrix Pro Appl. Connector Harness, Console, Matrix Pro', '', '', ''),
-  new ProfoundMetrixProParts('AS86571', 'PCBA, PWM Driver to Display, eTwo / eMatrix / eSpa', '', '', ''),
-  new ProfoundMetrixProParts('HR73251', 'Harness, P.S. 12V, eTwo', '', '', ''),
-  new ProfoundMetrixProParts('HR73493', 'Harness I/O to Display, eTwo', '', '', ''),
-  new ProfoundMetrixProParts('HR07868', 'CPU TO LCD (LVDS) , Adeline Star', '', '', ''),
-  new ProfoundMetrixProParts('PC73971', 'PCB, Air Switch, matrix Pro', '', '', ''),
-  new ProfoundMetrixProParts('AS9592A', 'Applicator Support Assy', '', '', ''),
-  new ProfoundMetrixProParts('AS9597A', 'Fan with Connector. Assy, Matrix Pro', '', '', ''),
-  new ProfoundMetrixProParts('SBA100248', 'Controller card, touch screen', '', '', ''),
-  new ProfoundMetrixProParts('HR07870', 'Harness, Power Supply 12V, Matrix Pro', '', '', ''),
-  new ProfoundMetrixProParts('HR7848A', 'PWR Switch Harness, Matrix Pro', '', '', ''),
-  new ProfoundMetrixProParts('HR7856', 'Harness, IO to RF Control, Console', '', '', ''),
-  new ProfoundMetrixProParts('HR7857', 'Harness, Power Supply to IO, Console', '', '', ''),
-  new ProfoundMetrixProParts('HR7858', 'Harness, Splitter to PI filter, Console', '', '', ''),
-  new ProfoundMetrixProParts('HR7859', 'Harness, RF to Splitter, Console', '', '', ''),
-  new ProfoundMetrixProParts('HR7860', 'Harness, IO-J1 to Splitter-J8, Console', '', '', ''),
-  new ProfoundMetrixProParts('MC0895A', 'Air filter', '', '', ''),
-  new ProfoundMetrixProParts('MC09761', 'PS, LOWER CABLE CLAMP', '', '', ''),
-  new ProfoundMetrixProParts('AS72402', 'PCBA, PWR Switch, eMatrix', '', '', ''),
-  new ProfoundMetrixProParts('SBA100246', 'Touch Screen Adhered to LCD Sub-Assy, eMatrix', '', '', ''),
-  new ProfoundMetrixProParts('AS9590A', 'Display Bezel Assembly', '', '', ''),
-  new ProfoundMetrixProParts('HR72500', 'Harness, LED back light cable, L=200mm', '', '', ''),
-  new ProfoundMetrixProParts('HR73211', 'Harness,1wire Sig.forST Appl.-I/O to Splitter,e2', '', '', ''),
-  new ProfoundMetrixProParts('HR73971', '38V RF Card Power Harness, eTwo', '', '', ''),
-  new ProfoundMetrixProParts('1303-00-1480', 'CLAMP, APPLICATOR HOLSTER', '', '', ''),
-  new ProfoundMetrixProParts('FG71851', 'Applicator Assy, Matrix Pro', '', '', ''),
-  new ProfoundMetrixProParts('AS9575A', 'Upper Tray Assembly', '', '', ''),
-  new ProfoundMetrixProParts('AS9578A', 'Front Panel Assembly', '', '', ''),
-  new ProfoundMetrixProParts('AS9579A', 'Rear Panel Assembly', '', '', ''),
-  new ProfoundMetrixProParts('AS9581A', 'AC Inlet Assembly', '', '', ''),
-  new ProfoundMetrixProParts('AS9582A', 'USB & Speaker Assembly', '', '', ''),
-  new ProfoundMetrixProParts('HR07871', 'Harness,GND to Display, Profound Matrix', '', '', ''),
-  new ProfoundMetrixProParts('HR77830', 'Cable, USB A panel mount female to USB A male L=12in.', '', '', ''),
-  new ProfoundMetrixProParts('MC0881A', 'Left Handle Bracket', '', '', ''),
-  new ProfoundMetrixProParts('MC0882A', 'Right Handle Bracket', '', '', ''),
-  new ProfoundMetrixProParts('MC0888A', 'Left Handle Extender', '', '', ''),
-  new ProfoundMetrixProParts('MC0889A', 'Right Handle Extender', '', '', ''),
-  new ProfoundMetrixProParts('MC0890A', 'Handle Rod', '', '', ''),
-  new ProfoundMetrixProParts('MC0920A', 'Bracket, DISPLAY BEZEL', '', '', ''),
-  new ProfoundMetrixProParts('2610-00-0073', 'FAN GUARD METAL, 120MM', '', '', ''),
-  new ProfoundMetrixProParts('AN00050', 'Antenna, WiFi, 2.4GHz and 5GHz dipole', '', '', ''),
-  new ProfoundMetrixProParts('AS79541', 'Fan with Conn. Assy, RF Cage, eTwo', '', '', ''),
-  new ProfoundMetrixProParts('AS95091', 'PCBAs Assy Splitter & Distributer, eTwo', '', '', ''),
-  new ProfoundMetrixProParts('AS95071', 'PCBA, I/O, eTwo', '', '', ''),
-  new ProfoundMetrixProParts('AS9586A', 'Assembly, Display Back Cover', '', '', ''),
-  new ProfoundMetrixProParts('HR71271', 'GND Wire, RF Cage, eMatrix', '', '', ''),
-  new ProfoundMetrixProParts('MC0987A', 'FootSwitch, air, 2m tube (black), 3mm I/D & 6mm O/D.', '', '', ''),
-  new ProfoundMetrixProParts('TL70791', 'Tool, Appl. Conn. Nut Fastener', '', '', ''),
+//new ProfoundMetrixProElectronicParts
+const ProfoundMetrixProElectronic = [
+  new ProfoundMetrixProElectronicParts('AS79444', 'PCBA, RF Module, eTwo', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AS09614', 'SBC, Pico-ITX, INTEL CPU. Profound Matrix', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AS95121', 'PCBA, Splitter Base, eTwo', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AS78481', 'PCBA, Splitter Distributor, eTwo', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AS9571A', 'RF Module Assymbly', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AS9573A', 'Computer Module Assembly', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AS9576A', 'Lower Tray Assembly', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AS9580A', 'Power Supply Assembly', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AS9596A', 'Loud Speaker with Harness, Matrix Pro', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AS86571', 'PCBA, PWM Driver to Display, eTwo / eMatrix / eSpa', '', '', ''),
+  new ProfoundMetrixProElectronicParts('PC73971', 'PCB, Air Switch, matrix Pro', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AS9597A', 'Fan with Connector. Assy, Matrix Pro', '', '', ''),
+  new ProfoundMetrixProElectronicParts('SBA100248', 'Controller card, touch screen', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AS72402', 'PCBA, PWR Switch, eMatrix', '', '', ''),
+  new ProfoundMetrixProElectronicParts('SBA100246', 'Touch Screen Adhered to LCD Sub-Assy, eMatrix', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AS9590A', 'Display Bezel Assembly', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AS9581A', 'AC Inlet Assembly', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AS9582A', 'USB & Speaker Assembly', '', '', ''),
+  new ProfoundMetrixProElectronicParts('2610-00-0073', 'FAN GUARD METAL, 120MM', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AN00050', 'Antenna, WiFi, 2.4GHz and 5GHz dipole', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AS79541', 'Fan with Conn. Assy, RF Cage, eTwo', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AS95091', 'PCBAs Assy Splitter & Distributer, eTwo', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AS95071', 'PCBA, I/O, eTwo', '', '', ''),
+  new ProfoundMetrixProElectronicParts('AS9586A', 'Assembly, Display Back Cover', '', '', ''),
+];
+
+const ProfoundMetrixProApplicator = [
+  //new ProfoundMetrixProApplicatorParts
+  new ProfoundMetrixProApplicatorParts('FG71851', 'Applicator Assy, Matrix Pro', '', '', ''),
+];
+
+
+const ProfoundMetrixProConsumable = [
+  //new ProfoundMetrixProConsumableParts
+  new ProfoundMetrixProConsumableParts('MC0895A', 'Air filter', '', '', ''),
+  new ProfoundMetrixProConsumableParts('MC09761', 'PS, LOWER CABLE CLAMP', '', '', ''),
+  new ProfoundMetrixProConsumableParts('1303-00-1480', 'CLAMP, APPLICATOR HOLSTER', '', '', ''),
+  new ProfoundMetrixProConsumableParts('MC0987A', 'FootSwitch, air, 2m tube (black), 3mm I/D & 6mm O/D.', '', '', ''),
+];
+
+
+const ProfoundMetrixProCable = [
+  //new ProfoundMetrixProCableParts
+  new ProfoundMetrixProCableParts('HR07868', 'Harness,CPU TO LCD (LVDS), Profound Matrix', '', '', ''),
+  new ProfoundMetrixProCableParts('HR07869', 'Harness,IO to Display, Profound Matrix', '', '', ''),
+  new ProfoundMetrixProCableParts('HR7845A', 'Harness, CPU I/O Board Audio, Matrix Pro', '', '', ''),
+  new ProfoundMetrixProCableParts('HR7846A', 'Harness, CPU to I/O, Matrix Pro', '', '', ''),
+  new ProfoundMetrixProCableParts('HR7849A', 'Harness, Splitter to Applicator, Matrix Pro', '', '', ''),
+  new ProfoundMetrixProCableParts('HR78551', 'SubRF/Matrix Pro Appl. Connector Harness, Console, Matrix Pro', '', '', ''),
+  new ProfoundMetrixProCableParts('HR73251', 'Harness, P.S. 12V, eTwo', '', '', ''),
+  new ProfoundMetrixProCableParts('HR73493', 'Harness I/O to Display, eTwo', '', '', ''),
+  new ProfoundMetrixProCableParts('HR07868', 'CPU TO LCD (LVDS) , Adeline Star', '', '', ''),
+  new ProfoundMetrixProCableParts('HR07870', 'Harness, Power Supply 12V, Matrix Pro', '', '', ''),
+  new ProfoundMetrixProCableParts('HR7848A', 'PWR Switch Harness, Matrix Pro', '', '', ''),
+  new ProfoundMetrixProCableParts('HR7856', 'Harness, IO to RF Control, Console', '', '', ''),
+  new ProfoundMetrixProCableParts('HR7857', 'Harness, Power Supply to IO, Console', '', '', ''),
+  new ProfoundMetrixProCableParts('HR7858', 'Harness, Splitter to PI filter, Console', '', '', ''),
+  new ProfoundMetrixProCableParts('HR7859', 'Harness, RF to Splitter, Console', '', '', ''),
+  new ProfoundMetrixProCableParts('HR7860', 'Harness, IO-J1 to Splitter-J8, Console', '', '', ''),
+  new ProfoundMetrixProCableParts('HR72500', 'Harness, LED back light cable, L=200mm', '', '', ''),
+  new ProfoundMetrixProCableParts('HR73211', 'Harness,1wire Sig.forST Appl.-I/O to Splitter,e2', '', '', ''),
+  new ProfoundMetrixProCableParts('HR73971', '38V RF Card Power Harness, eTwo', '', '', ''),
+  new ProfoundMetrixProCableParts('HR07871', 'Harness,GND to Display, Profound Matrix', '', '', ''),
+  new ProfoundMetrixProCableParts('HR77830', 'Cable, USB A panel mount female to USB A male L=12in.', '', '', ''),
+  new ProfoundMetrixProCableParts('HR71271', 'GND Wire, RF Cage, eMatrix', '', '', ''),
+];
+
+
+const ProfoundMetrixProSkin = [
+  //new ProfoundMetrixProSkinParts
+  new ProfoundMetrixProSkinParts('AS9592A', 'Applicator Support Assy', '', '', ''),
+  new ProfoundMetrixProSkinParts('AS9575A', 'Upper Tray Assembly', '', '', ''),
+  new ProfoundMetrixProSkinParts('AS9578A', 'Front Panel Assembly', '', '', ''),
+  new ProfoundMetrixProSkinParts('AS9579A', 'Rear Panel Assembly', '', '', ''),
+  new ProfoundMetrixProSkinParts('MC0881A', 'Left Handle Bracket', '', '', ''),
+  new ProfoundMetrixProSkinParts('MC0882A', 'Right Handle Bracket', '', '', ''),
+  new ProfoundMetrixProSkinParts('MC0888A', 'Left Handle Extender', '', '', ''),
+  new ProfoundMetrixProSkinParts('MC0889A', 'Right Handle Extender', '', '', ''),
+  new ProfoundMetrixProSkinParts('MC0890A', 'Handle Rod', '', '', ''),
+  new ProfoundMetrixProSkinParts('MC0920A', 'Bracket, DISPLAY BEZEL', '', '', ''),
+];
+
+
+//new ProfoundMetrixProServicetoolsParts
+const ProfoundMetrixProServicetools = [
+  new ProfoundMetrixProServicetoolsParts('TL70791', 'Tool, Appl. Conn. Nut Fastener', '', '', ''),
 ];
 
 
@@ -922,9 +1031,9 @@ app.get('/part/:info', (req, res) => {
 
   let parts;
   if (partType === 'gmp') { // Check the selected part type
-    parts = [...opticsParts, ...consumableParts, ...electronicsParts, ...fluidSystem, ...headParts, ...gmphd, ...gmpController, ...gmpskin,  ...gmpcalport, ...gmptool, ...GmpUpgrade];
+    parts = [...opticsParts, ...consumableParts, ...electronicsParts, ...fluidSystem, ...headParts, ...gmphd, ...gmpController, ...gmpskin, ...gmpcalport, ...gmptool, ...GmpUpgrade];
   } else if (partType === 'gmpp') {
-    parts = [...gmpphd, ...opticsParts, ...consumableParts, ...electronicsParts, ...fluidSystem, ...headParts,  ...gmpcalport, ...gmptool];
+    parts = [...gmpphd, ...opticsParts, ...consumableParts, ...electronicsParts, ...fluidSystem, ...headParts, ...gmpcalport, ...gmptool];
   } else if (partType === 'vbeam') {
     parts = [...VbeamHead, ...vbeamConsumableParts, ...VbeamFluid, ...VbeamElectronic, ...VbeamMdye, ...VbeamOptics, ...VbeamServiceTool];
   } else if (partType === 'prima') {
@@ -932,10 +1041,10 @@ app.get('/part/:info', (req, res) => {
   } else if (partType === 'picoway') {
     parts = [...picowayArmParts, ...picowayHandpieceParts, ...picowayElectronicsparts, ...PicowaySkin, ...PicowayConsumable, ...PicowayUpperRail, ...PicowayLowerLevel, ...PicowayHarness, ...PicowayFuidSystem];
   } else if (partType === 'nordlys') {
-    parts = [...NordlysConsumable, ...NordlysElectronic, ...Nordlysfluid];
+    parts = [...NordlysApplicator, ...NordlysConsumable, ...NordlysElectronic, ...Nordlysfluid, ...NordlysCable, ...NordlysSkin];
 
   } else if (partType === 'profoundmatrixpro') {
-    parts = [...profoundmatrixprop];
+    parts = [...ProfoundMetrixProElectronic, ...ProfoundMetrixProApplicator, ...ProfoundMetrixProConsumable, ...ProfoundMetrixProCable, ...ProfoundMetrixProSkin, ...ProfoundMetrixProServicetools];
 
   } else {
     parts = [
@@ -961,7 +1070,7 @@ app.get('/part/:info', (req, res) => {
       ...PrimaDyeHead,
       ...PrimaMDYE,
       ...PrimaCalport,
-      ...PrimaHeadrail, 
+      ...PrimaHeadrail,
       ...PrimaV14Upgrade,
       ...PrimaElectronic,
       ...PrimaCable,
@@ -977,13 +1086,21 @@ app.get('/part/:info', (req, res) => {
       ...PicowaySkin,
       ...PicowayConsumable,
       ...PicowayUpperRail,
-      ...PicowayLowerLevel, 
+      ...PicowayLowerLevel,
       ...PicowayHarness,
       ...PicowayFuidSystem,
+      ...NordlysApplicator,
       ...NordlysConsumable,
       ...NordlysElectronic,
       ...Nordlysfluid,
-      ...profoundmatrixprop,
+      ...NordlysCable,
+      ...NordlysSkin,
+      ...ProfoundMetrixProElectronic,
+      ...ProfoundMetrixProApplicator,
+      ...ProfoundMetrixProConsumable,
+      ...ProfoundMetrixProCable,
+      ...ProfoundMetrixProSkin,
+      ...ProfoundMetrixProServicetools,
     ];
   }
 
