@@ -247,7 +247,7 @@ const gmphd = [
   new GmpHandpieceparts('7122-00-9585', 'PRO SERIES ACC HP W AIR CLIP W/O FIBER', '', 'https://i.ibb.co/8gJH7XJ/7122-00-9585.jpg', 'F13.1, F13.3'),
   new GmpHandpieceparts('7122-00-9419', 'PRO SERIES FIBER', '', 'https://i.ibb.co/nz8q336/7122-00-9419.jpg', 'F15.1'),
   new GmpHandpieceparts('3160-00-1150', 'O-RING, 13/16ID, 3/32W, BUNA-N', 'Inside of Handpiece', 'https://i.ibb.co/dQ5hPWn/3160-00-1150.jpg', 'F12.2, F12.1, F12.4, F12.6'),
-  new GmpHandpieceparts('1301-00-9457', 'FOAM,PRE-CUT,SPECTRUM FAN', '', '', ''),
+  new GmpHandpieceparts('1301-00-9457', 'FOAM,PRE-CUT,SPECTRUM FAN', '', 'https://i.ibb.co/6815NbN/1301-00-9457.png', 'Handpiece Filter'),
   new GmpHandpieceparts('7122-00-9746', 'LARGE SPOT FIBER ASSY', 'Green Fiber', '', 'F15.1'),
   new GmpHandpieceparts('7122-00-9748', 'DCD LARGE SPOT DELIVERY SYSTEM ASSY', 'Large Spot Delivery System\nLarge DCD handpiece\n20/22/24', 'https://i.ibb.co/CsHZSdL/7122-00-9748.jpg', 'F1.1, F8.3, F13.1, F13.3'),
   new GmpHandpieceparts('7122-00-9602', 'ASSY,SPECIALIZED PRO DCD HP W/O FIBER', 'Specialty HP\n1.5/3/5/3x10\nvascular vein', '', ''),
@@ -966,11 +966,12 @@ const ProfoundMetrixProApplicator = [
 
 
 const ProfoundMetrixProConsumable = [
-  //new ProfoundMetrixProConsumableParts
+  //new ProfoundMetrixProConsumableParts('', '', '', '', ''),
   new ProfoundMetrixProConsumableParts('MC0895A', 'Air filter', '', '', ''),
   new ProfoundMetrixProConsumableParts('MC09761', 'PS, LOWER CABLE CLAMP', '', '', ''),
   new ProfoundMetrixProConsumableParts('1303-00-1480', 'CLAMP, APPLICATOR HOLSTER', '', '', ''),
   new ProfoundMetrixProConsumableParts('MC0987A', 'FootSwitch, air, 2m tube (black), 3mm I/D & 6mm O/D.', '', '', ''),
+  new ProfoundMetrixProConsumableParts('KT78161', 'Cartridge 7-Pkg, Matrix Pro', '', '', 'Tip'),
 ];
 
 
