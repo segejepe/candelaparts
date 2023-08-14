@@ -342,6 +342,7 @@ const VbeamOptics = [
   new VbeamOpticsParts('8075-00-1014', 'FIBER CBL 200UM ST/ST .37NA 24', '', 'https://i.ibb.co/X2Njc1y/8075-00-1014.jpg', 'fiber'),
   new VbeamOpticsParts('7122-00-3747', 'ASSY,FBR CBLS,ST,VBEAM2', 'fiber wire bundle set for the CP WL HD1 HD2', '', 'F12.5'),
   new VbeamOpticsParts('7122-00-7530', 'Assy, Head Detector', '', '', 'F11, F12.5'),
+  new VbeamOpticsParts('7122-00-7529', 'ASSY,FIBER RECEPTACLE,VBEAM2', 'Fiber Focus Assy', 'https://i.ibb.co/ZGYz7S4/7122-00-7529.png', 'F10.4'),
 ];
 
 // VbeamConsumableParts 객체 생성
@@ -701,6 +702,7 @@ const PicowayConsumable = [
   new PicowayConsumableParts('8901-00-9950', 'PM KIT, PICO', '', '', 'PM'),
   new PicowayConsumableParts('1630-00-0101', 'Burn paper', '', '', ''),
   new PicowayConsumableParts('1303-00-0203', 'COVER, ARM SPACER, PICOWAY', '', 'https://i.ibb.co/s3hpQF0/1303-00-0203.png', 'End of Arm'),
+  new PicowayConsumableParts('7123-00-0555', 'ASSY, Window Kit, Pico Zoom/Resolve/Fusion', 'Window Kit,Qty:15.00', '', 'Handpiece window'),
 ];
 
 
@@ -815,7 +817,7 @@ const NordlysConsumable = [
   //new NordlysConsumableParts('', '', '', '', ''),
   new NordlysConsumableParts('9WAT7407', 'Demineralized Water - 5 Liters', '', 'https://i.ibb.co/R7QMTfN/9WAT7407.png', ''),
   new NordlysConsumableParts('9WAT7786', 'Water Fill Tube - Nordlys/Sirius/Ydun', '', 'https://i.ibb.co/F0PJJXZ/9WAT7786.png', ''),
-  new NordlysConsumableParts('9PAC8023', 'Package of 10 rollers', 'New type, Long', '', ''),
+  new NordlysConsumableParts('9PAC8023', 'Package of 10 rollers', 'New type, Long, Only for 1550', '', ''),
   new NordlysConsumableParts('9PAC8014', 'Package of 10 rollers', 'Frax 1940/ Frax 1550 Rollers - Package of 10, individually wrapped rollers in metal case', '', ''),
   new NordlysConsumableParts('9SAP7711', 'Sapphire Tip', 'Nd-Yag HP Tip', 'https://i.ibb.co/4sqtfjh/9SAP7711.png', ''),
   new NordlysConsumableParts('4APL7377', 'Semi-circular Tip', 'Nd-Yag HP Tip', 'https://i.ibb.co/zWdwzJm/4APL7377.png', ''),
