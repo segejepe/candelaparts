@@ -32,6 +32,7 @@ class GmpUpgradeParts extends Part { }
 
 // Gmax pro Plus
 class GmppHandpieceparts extends Part { }
+class GmppControllerparts extends Part { }
 
 // Vbeam Perfecta
 class VbeamHeadParts extends Part { } // Add VbeamHeadParts class
@@ -313,6 +314,10 @@ const gmpphd = [
   new GmppHandpieceparts('7123-CE-0629', 'ASSY, ACC HAND PIECE, MEDIUM SPOT, GMPP', 'GMPP only', '', 'consumable'),
   new GmppHandpieceparts('7123-CE-0632', 'ASSY, DCD HAND PIECE, MEDIUM SPOT, GMPP', 'GMPP only', '', 'consumable'),
   new GmppHandpieceparts('7123-00-0609', 'ASSY, SLIDER ATTACHMENT, 26MM, GMPP', 'GMPP only', '', 'consumable'),
+];
+
+const GmppController = [
+  new GmppControllerparts('7123-00-0654', 'ASSY, GMPP SERIES LC I/O PCB w/FW', 'GMPP only', '', 'IO, CPU, F26.1'),
 ];
 
 // VbeamHeadParts 객체 생성
@@ -1035,7 +1040,7 @@ app.get('/part/:info', (req, res) => {
   if (partType === 'gmp') { // Check the selected part type
     parts = [...opticsParts, ...consumableParts, ...electronicsParts, ...fluidSystem, ...headParts, ...gmphd, ...gmpController, ...gmpskin, ...gmpcalport, ...gmptool, ...GmpUpgrade];
   } else if (partType === 'gmpp') {
-    parts = [...gmpphd, ...opticsParts, ...consumableParts, ...electronicsParts, ...fluidSystem, ...headParts, ...gmpcalport, ...gmptool];
+    parts = [...gmpphd, ...opticsParts, ...consumableParts, ...electronicsParts, ...fluidSystem, ...headParts, ...gmpcalport, ...gmptool, ...GmppController];
   } else if (partType === 'vbeam') {
     parts = [...VbeamHead, ...vbeamConsumableParts, ...VbeamFluid, ...VbeamElectronic, ...VbeamMdye, ...VbeamOptics, ...VbeamServiceTool];
   } else if (partType === 'prima') {
@@ -1062,6 +1067,7 @@ app.get('/part/:info', (req, res) => {
       ...gmptool,
       ...GmpUpgrade,
       ...gmpphd,
+      ...GmppController,
       ...VbeamHead,
       ...vbeamConsumableParts,
       ...VbeamFluid,
